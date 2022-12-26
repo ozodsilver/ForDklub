@@ -1,0 +1,31 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(58, 104, 169, 0.63); 
+  border-radius: 12px;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(99.22deg, #5c0e627e 1.27%, #00b4d076 92.23%);
+  border-radius: 15px;
+  height: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(99.22deg, #5c0e6296 1.27%, #00b4d093 92.23%);
+}
+
+body{
+  cursor: url('http://www.benkamprath.com/wp-content/uploads/2015/07/IMG_PushFurther_10.jpg') auto !important;
+}
+
