@@ -1,7 +1,7 @@
 <template>
   <!-- Navbar -->
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg ">
+  <nav class="navbar navbar-expand-lg">
     <!-- Container wrapper -->
     <div class="container">
       <!-- Toggle button -->
@@ -112,9 +112,6 @@
     </div>
     <!-- Container wrapper -->
   </nav>
-  <!-- Navbar -->
-
-  <!-- Navbar -->
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 500">
     <path
@@ -134,23 +131,31 @@
 
   <div class="container">
     <div class="row">
-      <div class=" col-md-5 col-12 position-relative" style="margin-top: -20%">
-        <div class="play-btn-box " >
+      <div class="col-md-5 col-12 position-relative" style="margin-top: -20%">
+        <div class="play-btn-box" v-if="show" @click="show = !show" style="cursor:pointer">
           <div class="play-button"><i class="fas fa-play text-light" id="play2"></i></div>
           <div class="play-btn-line1" id="line1">
             <div class="play-btn-line2" id="line2"></div>
           </div>
         </div>
 
-        <iframe
-          v-show="show"
-          class="w-100 h-50 rounded-5"
-          src="https://www.youtube.com/embed/cUuUMVQzpjI"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <div class="h-100">
+          <Transition name="bounce">
+          <i class="fas fa-window-close float-right fa-2x" v-if="!show"  @click="show = !show"></i>
+          </Transition>
+          <Transition name="bounce">
+            <iframe
+              v-if="!show"
+              class="w-100 h-50 rounded-5"
+              src="https://www.youtube.com/embed/cUuUMVQzpjI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              @click="this.requestFullScreen()"
+            ></iframe>
+          </Transition>
+        </div>
       </div>
       <div class="col-12 col-md-7 d-none d-md-block" style="margin-top: -40%">
         <img src="../assets/jaxon.svg" alt="" class="w-100 h-100 img-fluid" />
@@ -159,7 +164,15 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      show: true,
+    };
+  },
+};
+</script>
 
 <style scoped>
 nav {
@@ -200,13 +213,13 @@ a:hover {
   box-sizing: content-box;
 }
 
-#play2{
+#play2 {
   transition: 1s;
   position: relative;
   z-index: 11111;
 }
 
-#play2:hover{
+#play2:hover {
   transform: scale(1.3);
 }
 
@@ -301,6 +314,26 @@ a:hover {
   }
   to {
     -webkit-transform: rotate(359deg);
+  }
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.6s;
+  
+}
+.bounce-leave-active {
+ display: none;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 </style>
