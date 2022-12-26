@@ -1,7 +1,7 @@
 <template>
   <!-- Navbar -->
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg ">
     <!-- Container wrapper -->
     <div class="container">
       <!-- Toggle button -->

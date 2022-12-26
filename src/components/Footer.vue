@@ -24,16 +24,7 @@ background: linear-gradient(13deg, rgba(93,191,156,1) 0%, rgba(53,73,94,1) 56%);
 
      
     </div>
-    <!-- 
-  <div class=" col-12 box">
-    <h1 class="title">
-     <h1 class=" h12">Make & Share <span class=" text-black">Payments</span> With Community</h1> 
-    </h1>
-    <p class=" fw-light">Hac sem ut eget tellus diam convallis lacus a, interdum nulla sem adipiscing inw</p>
-    
 
-    <button class="btn btn1">Learn more</button>
-  </div> -->
     <br />
   </div>
 </template>
@@ -99,13 +90,7 @@ i {
   width: 300px !important;
   border-left: 4px solid rgba(121, 138, 201, 1);
 }
-.card:hover {
-  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.427) !important;
-.card:hover{
-  box-shadow: 5px 5px 12px rgba(49, 49, 49, 0.326) !important;
-  transform: translateY(-5px);
-  cursor: pointer;
-}
+
 .card-title {
   color: rgba(92, 94, 110, 1);
   font-weight: bold;
