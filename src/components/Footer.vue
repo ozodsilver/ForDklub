@@ -1,8 +1,8 @@
 <template>
 
-<div class="container bottom">
-  <div class=" container bosscard">
-    <div class=" row justify-content-between m-3 battom1">
+<div class="container-fluid bottom">
+  <div class=" container-fluid bosscard">
+    <div class=" row justify-content-around m-3 battom1">
       <div class="card w-25  shadow-4 rounded-1 ">
     <div class="card-body">
       <i class="far fa-newspaper"></i>
@@ -39,7 +39,7 @@
     
     
 
-<div class="row mt-2 justify-content-between m-2">
+<div class="row mt-2 justify-content-around m-2">
 
   <div class="card w-25  shadow-4 rounded-1 col-6">
     <div class="card-body">
