@@ -155,8 +155,8 @@ img {
   width: 55px;
   height: 55px;
 }
-.box1 {
-  transition: 0.3s;
+.box1{
+  transition: .2s;
 }
 .h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -165,28 +165,29 @@ img {
 
   border-bottom: #5c0e62 double;
 }
-.rang {
-  transition-delay: 0.3s;
+.rang{
+ 
+  transition-delay: .1s;
   transform: scale(1.2);
   background-color: #5c0e629e;
 }
-.rang1 {
-  transition-delay: 0.6s;
+.rang1{
+  transition-delay: .3s;
   transform: scale(1.2);
   background-color: #5c0e62;
 }
-.rang2 {
-  transition-delay: 0.9s;
+.rang2{
+  transition-delay: .6s;
   transform: scale(1.2);
   background-color: #5c0e62;
 }
-.rang3 {
-  transition-delay: 1.1s;
+.rang3{
+  transition-delay: .8s;
   transform: scale(1.2);
   background-color: #5c0e62;
 }
-.rang4 {
-  transition-delay: 1.4s;
+.rang4{
+  transition-delay: 1s;
   transform: scale(1.2);
   background-color: #5c0e6256;
 }

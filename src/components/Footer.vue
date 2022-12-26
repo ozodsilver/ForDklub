@@ -1,63 +1,28 @@
 <template>
-  <div class="container-fluid bottom">
+
+  <div class="container-fluid my-4">
+  
     <div class="container-fluid bosscard">
-      <div class="row justify-content-around m-3 battom1">
-        <div class="card w-25 shadow-4 rounded-1">
-          <div class="card-body">
-            <i class="far fa-newspaper"></i>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Now track all of your transaction easily.</p>
-            <v_row></v_row>
-          </div>
-        </div>
-
-        <div class="card w-25 shadow-4 rounded-1">
-          <div class="card-body">
-            <i class="fas fa-chart-line"></i>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Now track all of your transaction easily.</p>
-            <v_row></v_row>
-          </div>
-        </div>
-
-        <div class="card w-25 shadow-4 rounded-1">
-          <div class="card-body">
-            <i class="fas fa-chart-line"></i>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Now track all of your transaction easily.</p>
-            <v_row></v_row>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-2 justify-content-around m-2">
-        <div class="card w-25 shadow-4 rounded-1 col-6">
-          <div class="card-body">
-            <i class="fas fa-male"></i>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Now track all of your transaction easily.</p>
-            <v_row></v_row>
-          </div>
-        </div>
+      <h1 class="py-5  w-25 my-5" style="background: rgb(93,191,156);
+background: linear-gradient(13deg, rgba(93,191,156,1) 0%, rgba(53,73,94,1) 56%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom:3px double rgb(93,191,156) " >Bizda mavjud kurslar</h1>
     
-        <div class="card w-25 shadow-4 rounded-1 col-6">
+    <div class="container py-5">
+      <div class="row mt-5 mb-0 pt-5">
+<div class="col-3" v-for="course in courses" :key="course.id">
+  <div class="card w-100 shadow-lg rounded-5">
           <div class="card-body">
-            <i class="fas fa-male"></i>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Now track all of your transaction easily.</p>
+       
+            <h5 class="card-title">{{ course.course }}</h5>
+            <p class="card-text">{{ course.title }}</p>
             <v_row></v_row>
           </div>
         </div>
+  </div>      
 
-        <div class="card w-25 shadow-4 rounded-1 col-6">
-          <div class="card-body">
-            <i class="fas fa-money-bill"></i>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Now track all of your transaction easily.</p>
-            <v_row></v_row>
-          </div>
-        </div>
       </div>
+    </div>
+
+     
     </div>
     <!-- 
   <div class=" col-12 box">
@@ -86,6 +51,19 @@ export default {
       notifications: false,
       sound: true,
       widgets: false,
+      courses:[
+        {
+          id:1,
+          course:'Frontend',
+          title:'lorem lorem'
+        },
+
+        {
+          id:2,
+          course:'Backend',
+          title:'lorem lorem'
+        }
+      ]
     };
   },
 };
@@ -123,6 +101,8 @@ i {
 }
 .card:hover {
   box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.427) !important;
+.card:hover{
+  box-shadow: 5px 5px 12px rgba(49, 49, 49, 0.326) !important;
   transform: translateY(-5px);
   cursor: pointer;
 }

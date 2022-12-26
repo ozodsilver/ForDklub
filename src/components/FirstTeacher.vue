@@ -1,6 +1,6 @@
 <template>
 
-<span>
+<div class=" card">
   <p class="srt p1 "><p class="p fw-bold text-danger">MOBILE TRANSACTION</p> </p>
     <h1 class="fw-bold text-secondary w-75">
       Smart Mobile <span>Banking</span>
@@ -8,7 +8,7 @@
     <p class=" w-75">Hac sem ut eget tellus diam convallis lacus a, interdum nulla sem adipiscing inw</p>
     <button class="btn">Learn more</button>
     
-</span>
+</div>
 
 
 </template>
