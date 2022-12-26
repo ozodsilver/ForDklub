@@ -141,7 +141,7 @@ img{
  
   transition-delay: .3s;
   transform: scale(1.2);
-  background-color:#5C0E62;
+  background-color:#5c0e629e;
 }
 .rang1{
   transition-delay: .6s;
