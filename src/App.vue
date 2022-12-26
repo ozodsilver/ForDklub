@@ -4,7 +4,6 @@
   <Teacher></Teacher>
 </template>
 
-
 <script>
 import Home from "./components/Home.vue";
 import Footer1 from "./components/Footer.vue";
