@@ -39,7 +39,7 @@
             <v_row></v_row>
           </div>
         </div>
-
+    
         <div class="card w-25 shadow-4 rounded-1 col-6">
           <div class="card-body">
             <i class="fas fa-male"></i>
