@@ -1,66 +1,55 @@
-
 <template>
-
-<Navigation></Navigation>
-<img src="../assets/jaxon.svg" alt="" class="w-50 "/>
-
+  <Navigation></Navigation>
 </template>
-  
+
 <script>
-import Navigation from './Navigation.vue'
+import Navigation from "./Navigation.vue";
 
-
-export default{
-  data(){
-return{
-
-}
+export default {
+  data() {
+    return {};
   },
-  components:{
-    Navigation
+  components: {
+    Navigation,
   },
-
-
-}
-
+};
 </script>
-  
+
 <style scoped>
 @media screen and (max-width: 800px) {
-img{
-  display: none;
+  img {
+    display: none;
+  }
 }
+.box {
+  margin-top: -200px;
 }
-.box{
-   margin-top: -200px;
-}
-h1 p{
+h1 p {
   color: white;
 }
-h1{
+h1 {
   font-size: 50px;
   font-weight: bold;
   color: white;
 }
-.btn1{
+.btn1 {
   background-color: rgba(121, 138, 201, 1);
   width: 100px !important;
   height: 50px !important;
-  transition: .3s
+  transition: 0.3s;
 }
-.btn1:hover{
+.btn1:hover {
   transform: translateY(-5px);
 }
-img{
-   position: relative;
-   top: -250px;
-   right: -500px;
-
+img {
+  position: relative;
+  top: -250px;
+  right: -500px;
 }
 .btn4 {
-  background-color: #FFBC51;
-  box-shadow: 3px 3px 10px #FFBC51;
-  transition: .3s;
+  background-color: #ffbc51;
+  box-shadow: 3px 3px 10px #ffbc51;
+  transition: 0.3s;
   width: 80px;
   height: 33px;
 }
@@ -71,33 +60,29 @@ img{
 
 a {
   color: white !important;
-  transition: .5s;
+  transition: 0.5s;
   font-family: sans-serif;
 }
 
 a:hover {
   color: rgba(0, 0, 0, 0.505) !important;
 }
-   
 
 .btn3 {
   border: none;
   box-shadow: none;
-  transition: .3s;
+  transition: 0.3s;
   width: 80px;
   height: 33px;
-
 }
 
 .btn3:hover {
   background-color: #f4c67d72;
-
 }
 
 li {
   list-style: none;
 }
-
 
 svg {
   position: absolute;
@@ -114,13 +99,13 @@ svg {
 .wave-header {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(99.22deg, #5C0E62 1.27%, #00B5D0 92.23%);
+  background: linear-gradient(99.22deg, #5c0e62 1.27%, #00b5d0 92.23%);
   position: relative;
 }
 
 .btn5 {
-  background-color:rgba(121, 138, 201, 1) !important;
-  transition: .4s;
+  background-color: rgba(121, 138, 201, 1) !important;
+  transition: 0.4s;
   width: 100px;
   height: 40px;
 }
