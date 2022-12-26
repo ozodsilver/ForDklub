@@ -129,7 +129,7 @@ img{
   height: 55px;
 }
 .box1{
-  transition: .3s;
+  transition: .2s;
 }
 .h1{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -139,27 +139,27 @@ img{
 }
 .rang{
  
-  transition-delay: .3s;
+  transition-delay: .1s;
   transform: scale(1.2);
   background-color:#5c0e629e;
 }
 .rang1{
-  transition-delay: .6s;
+  transition-delay: .3s;
   transform: scale(1.2);
   background-color:#5C0E62;
 }
 .rang2{
-  transition-delay: .9s;
+  transition-delay: .6s;
   transform: scale(1.2);
   background-color:#5C0E62;
 }
 .rang3{
-  transition-delay: 1.1s;
+  transition-delay: .8s;
   transform: scale(1.2);
   background-color:#5C0E62;
 }
 .rang4{
-  transition-delay: 1.4s;
+  transition-delay: 1s;
   transform: scale(1.2);
   background-color:#5c0e6256;
 }

@@ -154,7 +154,7 @@ i{
   border-left: 4px solid      rgba(121, 138, 201, 1)  ;
 }
 .card:hover{
-  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.427) !important;
+  box-shadow: 5px 5px 12px rgba(49, 49, 49, 0.326) !important;
   transform: translateY(-5px);
   cursor: pointer;
 }
