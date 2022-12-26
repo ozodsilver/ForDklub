@@ -1,8 +1,8 @@
 <template>
 
-<div class="container d-flex justify-content-between">
+<div class="container bottom">
   <div class=" container bosscard">
-    <div class=" row gap-2 m-3 mb-4">
+    <div class=" row justify-content-between m-3 battom1">
       <div class="card w-25  shadow-4 rounded-1 ">
     <div class="card-body">
       <i class="far fa-newspaper"></i>
@@ -24,12 +24,36 @@
     <v_row></v_row>
     </div>
 </div>
+
+<div class="card w-25 shadow-4 rounded-1 ">
+    <div class="card-body">
+      <i class="fas fa-chart-line"></i>
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">
+      Now track all of your transaction easily.
+    </p>
+    <v_row></v_row>
+    </div>
+</div>
     </div>
     
+    
 
-<div class="row mt-2 gap-2 m-2">
+<div class="row mt-2 justify-content-between m-2">
 
   <div class="card w-25  shadow-4 rounded-1 col-6">
+    <div class="card-body">
+      <i class="fas fa-male"></i>
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">
+      Now track all of your transaction easily.
+    </p>
+    <v_row></v_row>
+  
+    </div>
+</div>
+
+<div class="card w-25  shadow-4 rounded-1 col-6">
     <div class="card-body">
       <i class="fas fa-male"></i>
     <h5 class="card-title">Card title</h5>
@@ -53,7 +77,7 @@
 </div>
 </div>
   </div>
-
+<!-- 
   <div class=" col-12 box">
     <h1 class="title">
      <h1 class=" h12">Make & Share <span class=" text-black">Payments</span> With Community</h1> 
@@ -62,7 +86,7 @@
     
 
     <button class="btn btn1">Learn more</button>
-  </div>
+  </div> -->
   <br>
 
   
@@ -100,6 +124,12 @@ import v_row from './v-row.vue'
   .dialog-bottom-transition-enter-active,
 .dialog-bottom-transition-leave-active {
   transition:  2.5s ease-in-out;
+}
+.bottom{
+  margin-bottom: 80px;
+}
+.battom1{
+  margin-bottom: 50px !important;
 }
 
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="container srt d-flex gap-5 mt-5 srt2">
+  <div class="container srt d-flex  srt2  m-auto ">
 
     <div class=" w-50 srt1">
       <div class=" d-flex">
@@ -23,7 +23,7 @@
 
     </div>
     
-    <div class=" mt-5 container srt srt3">
+    <div class=" mt-5 container srt srt3 d-block m-auto">
       <Transition>
 <component :is="tanlanganComponent"></component>
 </Transition>
