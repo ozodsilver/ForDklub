@@ -5,7 +5,6 @@
   <Kurs></Kurs>
 </template>
  
-
 <script>
 import Home from "./components/Home.vue";
 import Footer1 from "./components/Footer.vue";
@@ -24,4 +23,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style >
+
+body{
+  background: rgb(255, 255, 255);
+}
+
+
+</style>
