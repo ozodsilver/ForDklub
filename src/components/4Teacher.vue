@@ -21,6 +21,7 @@
   <style scoped>
   span{
     transition: 2s;
+    position: absolute;
   }
   
    

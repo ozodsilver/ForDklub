@@ -36,6 +36,7 @@
   span{
     color:rgba(92, 14, 98, 1) ;
     transition: 2s;
+    position: absolute;
   }
   .btn{
     color:rgba(92, 14, 98, 1) ;
