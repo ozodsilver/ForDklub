@@ -6,7 +6,7 @@
       Smart Mobile <span>Banking</span>
     </h1>
     <p class=" w-75">Hac sem ut eget tellus diam convallis lacus a, interdum nulla sem adipiscing inw</p>
-    <button class="btn">Learn more</button>
+    <button class="btn">Learn mora</button>
     
 </div>
 
