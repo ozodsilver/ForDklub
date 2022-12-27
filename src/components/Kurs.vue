@@ -1,7 +1,8 @@
 <template>
-  <div class="container top">
-    <h1 class="h1 w-50 py-3 pb-5">Kurslar uchun texnalogiyalar</h1>
-    <div class="d-flex justify-content-between w-100 mt-5 pt-5">
+  <div class="container-fluid top">
+    <h1 class="h1 w-50 py-3 pb-5" style="background: rgb(93,191,156);
+background: linear-gradient(13deg, rgba(93,191,156,1) 0%, rgba(53,73,94,1) 56%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom:3px double rgb(93,191,156) ">Kurslar uchun texnalogiyalar</h1>
+    <div class="d-flex container justify-content-between w-100 mt-5 pt-5">
       <div>
         <div>
           <input
