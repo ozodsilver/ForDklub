@@ -16,40 +16,23 @@ import Home from'./components/Home.vue'
 import Footer1 from'./components/Footer.vue'
 import Teacher from'./components/Teachers.vue'
 import center from './components/center.vue'
-
-export default{
-  components:{
-  Home,
-  Footer1,
-  Teacher,
-  center,
-  end,
-  darkend,
-},
-  data(){
-    return{
-
-
-    }
-  }
-}
-
-import Home from "./components/Home.vue"
-import Footer1 from "./components/Footer.vue"
-import Teacher from "./components/Teachers.vue"
 import Kurs from "./components/Kurs.vue"
+
 export default {
-  components: {
+  components: { 
     Home,
     Footer1,
     Teacher,
-    Kurs
+    Kurs,
+    center,
+    darkend,
+    end
   },
   data() {
     return {};
   },
 };
->>>>>>> bd43f1c886b6c6e0866147f608c7d63ee748b3b1
+
 </script>
 
 <style >
