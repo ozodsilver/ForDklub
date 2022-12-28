@@ -10,7 +10,7 @@
 
       <Transition :duration="550" name="nested">
         <div class="jaxon" v-show='show'>
-          <div class="modal-content1 rounded-6">
+          <div class="modal-content1 rounded-6" >
             <span class=" close1" @click="show = false">&times;</span>
             <h1 ref='heading' class=" text-light h11"></h1>
             <p ref='demo' class="demo"></p>
