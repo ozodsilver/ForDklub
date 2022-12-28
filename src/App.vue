@@ -1,26 +1,38 @@
 <template>
-  <Home></Home>
-  <Footer1></Footer1>
-  <Teacher></Teacher>
-  <Kurs></Kurs>
+<Home></Home>
+<Footer1></Footer1>
+<center></center>
+<Teacher></Teacher>
+<end></end>
+<darkend></darkend>
 </template>
  
 <script>
-import Home from "./components/Home.vue";
-import Footer1 from "./components/Footer.vue";
-import Teacher from "./components/Teachers.vue";
-import Kurs from "./components/Kurs.vue";
+
+
+import darkend from './components/darkend.vue'
+import end from './components/end.vue'
+import Home from'./components/Home.vue'
+import Footer1 from'./components/Footer.vue'
+import Teacher from'./components/Teachers.vue'
+import center from './components/center.vue'
+import Kurs from "./components/Kurs.vue"
+
 export default {
-  components: {
+  components: { 
     Home,
     Footer1,
     Teacher,
-    Kurs
+    Kurs,
+    center,
+    darkend,
+    end
   },
   data() {
     return {};
   },
 };
+
 </script>
 
 <style >
