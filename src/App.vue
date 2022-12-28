@@ -34,10 +34,10 @@ export default{
   }
 }
 
-import Home from "./components/Home.vue";
-import Footer1 from "./components/Footer.vue";
-import Teacher from "./components/Teachers.vue";
-import Kurs from "./components/Kurs.vue";
+import Home from "./components/Home.vue"
+import Footer1 from "./components/Footer.vue"
+import Teacher from "./components/Teachers.vue"
+import Kurs from "./components/Kurs.vue"
 export default {
   components: {
     Home,

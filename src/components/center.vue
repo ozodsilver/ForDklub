@@ -17,7 +17,7 @@
         <div class="ramka">
             <div class="shakl">
                 <h6 class="">CREDIT CARD</h6>
-            </div>
+            </div>nbchgjcvkjhvklbkjhknkjbkvjcfjghkb
 
             <h1 class="text1 fw-bold salom1">Payment</h1>
             <h1 class="text2 fw-bold salom2">Gets Easier</h1>
