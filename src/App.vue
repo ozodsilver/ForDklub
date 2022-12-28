@@ -1,4 +1,3 @@
-
 <template>
 <Home></Home>
 <Footer1></Footer1>
@@ -7,9 +6,9 @@
 <end></end>
 <darkend></darkend>
 </template>
-
-
+ 
 <script>
+
 
 import darkend from './components/darkend.vue'
 import end from './components/end.vue'
@@ -35,10 +34,29 @@ export default{
   }
 }
 
+import Home from "./components/Home.vue";
+import Footer1 from "./components/Footer.vue";
+import Teacher from "./components/Teachers.vue";
+import Kurs from "./components/Kurs.vue";
+export default {
+  components: {
+    Home,
+    Footer1,
+    Teacher,
+    Kurs
+  },
+  data() {
+    return {};
+  },
+};
+>>>>>>> bd43f1c886b6c6e0866147f608c7d63ee748b3b1
 </script>
 
+<style >
 
-<style scoped>
+body{
+  background: rgb(255, 255, 255);
+}
 
 
 </style>
