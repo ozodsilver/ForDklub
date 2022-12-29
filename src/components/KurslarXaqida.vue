@@ -27,7 +27,7 @@
 
     </div>
 
-    <br />
+
   </div>
 </template>
 
@@ -40,10 +40,8 @@ export default {
   },
   data() {
     return {
-      dialog: false,
-      notifications: false,
-      sound: true,
-      widgets: false,
+  
+   
       courses: [
         {
           id: 1,

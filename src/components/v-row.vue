@@ -92,11 +92,14 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
+          class="position-absolute"
+          style="z-index:8888"
             color="blue-darken-1"
+            background = 'primary'
             variant="text"
             @click="dialog = false"
           >
-            Close
+            close
           </v-btn>
           <v-btn
             color="blue-darken-1"

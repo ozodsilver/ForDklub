@@ -8,31 +8,24 @@
         </div>
       </div>
 
+
       <Transition :duration="550" name="nested">
-        <div class="jaxon" v-show='show'>
-          <div class="modal-content1 rounded-6" >
-            <span class=" close1" @click="show = false">&times;</span>
+        <div class=" jaxon" v-show="show">
+          <div class="modal-content1 rounded-6">
+            <i class="fas fa-times close1 fs-3 text-light"  @click="show = false"></i> 
             <h1 ref='heading' class=" text-light h11"></h1>
             <p ref='demo' class="demo"></p>
           </div>
         </div>
+
       </Transition>
 
-
-
-
-
     </div>
-
-
-
   </div>
 </template>
 <script>
 
-
 export default {
-
   data() {
     return {
       dialog: false,
@@ -74,7 +67,6 @@ export default {
     };
 
   },
-
 
   methods: {
     openModal(id) {
@@ -134,13 +126,16 @@ export default {
 }
 
 .close1:hover {
-  color: white;
+  color: rgb(126, 124, 124) !important;
   cursor: pointer;
 }
 
 .close1:focus {
   color: rgb(105, 104, 104);
   text-decoration: none;
+}
+.close1{
+  transition: .2s;
 }
 
 .jaxon {
@@ -177,12 +172,15 @@ export default {
   -webkit-text-fill-color: transparent;
   border-bottom: 3px double rgb(93, 191, 156)
 }
+
 .box {
   transition: 0.5s;
 }
+
 .box img {
   border-radius: 46% 54% 48% 52% / 30% 30% 70% 70%;
 }
+
 .box:hover {
   transform: perspective(50rem) translateZ(50px);
 }

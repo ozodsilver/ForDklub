@@ -1,6 +1,6 @@
 import  { createRouter, createWebHashHistory } from 'vue-router'
 import Header from '../components/Home.vue'
-import Footer from '../components/Footer.vue'
+import KurslarXaqida from '../components/KurslarXaqida.vue'
 
 
 const routes =  [
@@ -14,7 +14,7 @@ const routes =  [
     {
         path:'/Footers',
         name:'link2',
-        component:Footer
+        component:KurslarXaqida
     },
 
 ]

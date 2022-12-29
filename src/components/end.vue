@@ -1,12 +1,12 @@
 <template>
-    <div class="kurinmas"></div>
-    <div class="kurinmas2"></div>
+   
+ 
         <div class="malumot">
-          
+
            <div class="boxbos">
 
                <div class="box3">
-                   <div class="shakl1"></div>
+                  
                   <div class="textbox">
                    <h1 class="text4 fw-bold">What Our <h1 class="text3 ms-2 fw-bold">Customer</h1> <h1 class="text5 fw-bold">Are saying</h1></h1>
 
@@ -58,7 +58,7 @@
 
 </script>
    
-<style>
+<style scoped>
 
 @media (max-width: 550px){
    
@@ -89,7 +89,6 @@
   
    }
    .text4{
-   
       font-size: 21px;
       display: inline-block;
       position: relative;
@@ -177,9 +176,7 @@
 .img1 img{
   display: block;
   margin: auto;
-  position: relative;
-  bottom: 2px;
-  
+ 
 }
 .img2{
    width: 110px;
@@ -243,29 +240,6 @@
 }
 
 
-.kurinmas{
-   width: 100%;
-   height: 60vh;
-   position: absolute;
-   top: 190%;
-   z-index: 888888;
-}
-
-
-.kurinmas::before{
-       content: '';
-       width: 40%;
-       position: absolute;
-       top: 330%;
-       height: 50vh;
-       border-radius: 22% 78% 70% 30% / 30% 23% 77% 70% ;
-       background-color: #85788530;;
-       z-index: 88888;
-       transform: rotate(0.32turn);
-       right: 85%;
-       
-}
-
 
 .text3{
    color:#5C0E62;
@@ -294,7 +268,6 @@
    .malumot{
        width: 100%;
        height: 110vh;
-       position: absolute;
        background: linear-gradient(99.22deg, #5C0E62 1.27%, #00B5D0 92.23%);
        clip-path: polygon(100% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 0 100%, 0% 80%, 0 25%);
    }
@@ -304,25 +277,18 @@
        width: 100%;
        height: 90vh;
        display: flex;
-       position: relative;
-       top: 130px;
+       margin-top:100px;
+      
    }
    .box3{
        width: 50%;
-       height: 90vh;
+      
+ 
    }
    .box4{
        width: 50%;
-       height: 90vh;
+ 
    }
-   .shakl1{
-       width: 10%;
-       height: 8vh;
-       border-radius: 37% 63% 70% 30% / 30% 48% 52% 70% ;
-       background-color: rgba(128, 128, 128, 0.274);
-       position: relative;
-       left: 15%;
-       top: 30%;
-   }
+  
 
 </style>

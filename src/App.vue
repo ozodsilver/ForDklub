@@ -1,32 +1,33 @@
 <template>
 <Home></Home>
-<Footer1></Footer1>
-<center></center>
+<KurslarXaqida></KurslarXaqida>
+<Center></Center>
 <Teacher></Teacher>
 <end></end>
-<darkend></darkend>
+<footer2></footer2>
+
 </template>
  
 <script>
 
 
-import darkend from './components/darkend.vue'
+import footer2 from './components/Footer1.vue'
 import end from './components/end.vue'
 import Home from'./components/Home.vue'
-import Footer1 from'./components/Footer.vue'
+import KurslarXaqida from'./components/KurslarXaqida.vue'
 import Teacher from'./components/Teachers.vue'
-import center from './components/center.vue'
+import Center from './components/center.vue'
 import Kurs from "./components/Kurs.vue"
 
 export default {
   components: { 
     Home,
-    Footer1,
+    KurslarXaqida,
     Teacher,
     Kurs,
-    center,
-    darkend,
-    end
+    Center,
+    end,
+    footer2,
   },
   data() {
     return {};
@@ -38,9 +39,7 @@ export default {
 <style >
 
 body{
-  background: rgb(255, 255, 255);
-
-}
+  background: rgb(255, 255, 255);}
 
 
 </style>
