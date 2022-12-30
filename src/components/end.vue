@@ -278,7 +278,7 @@
        height: 90vh;
        display: flex;
        margin-top:100px;
-      
+       position: absolute;
    }
    .box3{
        width: 50%;

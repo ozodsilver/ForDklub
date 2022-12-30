@@ -14,7 +14,7 @@
          <div class="boxboss">
             <div class="box1">
                <div class="ramka">
-                  <div class="shakl"></div>
+                  
                   <h1 class="text1 fw-bold salom1">Payment</h1>
                   <h1 class="text2 fw-bold salom2">Gets Easier</h1>
                   <p class="text-muted w-50 fw-bold">Hac sem ut eget tellus diam convallis lacus a, interdum nulla sem
@@ -72,25 +72,6 @@
    color: #5C0E62;
 }
 
-.shakl {
-   width: 20%;
-   height: 15vh;
-   border-radius: 37% 63% 70% 30% / 30% 48% 52% 70%;
-   background-color: rgba(128, 128, 128, 0.274);
-   position: relative;
-   left: 13%;
-   top: 13%;
-}
-
-.shakl h6 {
-   color: red;
-   position: relative;
-   width: 200% !important;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   position: relative;
-   left: 60px;
-   top: 60px;
-}
 
 .rasm {
    border-radius: 80% 20% 70% 30% / 15% 66% 34% 85%;
