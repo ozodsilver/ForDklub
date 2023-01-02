@@ -133,6 +133,13 @@
       width: 50%;
    }
 }
+@media (max-width: 380px){
+   .boxcha{
+      position: relative;
+      bottom: 500px !important;
+      
+   }
+}
 
 
 @media (max-width: 550px) {
@@ -144,17 +151,16 @@
       width: 100%;
       height: 50vh;
       position: relative;
-      top: 250px;
-
+      top: 200px;
    }
 
    .boxcha {
       width: 100%;
       height: 50vh;
       position: relative;
-      bottom: 460px;
+      bottom: 600px;
       background-image: url("../assets/phone2.png");
-      background-size: cover;
+      background-size: 80%;
    }
 
    .boxcha img {
