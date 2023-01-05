@@ -1,9 +1,11 @@
 <template>
 
 <Home v-if="store.isActive" ></Home>
-<KurslarXaqida v-if="store.isActive"></KurslarXaqida>
+<KurslarXaqida v-if="store.isActive" id="mavjudKurslar"></KurslarXaqida>
+<span id="ishlar"></span>
 <Center v-if="store.isActive"></Center>
 <span id="jaxon"></span>
+<span id="teachers"></span>
 <Teacher ></Teacher>
 <Kurs></Kurs>
 <end ></end>
