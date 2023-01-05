@@ -17,7 +17,7 @@
             <p class="demo"></p>
           </div>
         </div>
-        jaxon
+  
       </Transition>
     </div>
   </div>
