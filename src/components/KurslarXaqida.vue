@@ -8,9 +8,10 @@
        background: linear-gradient(13deg, rgba(93,191,156,1) 0%, rgba(53,73,94,1) 56%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom:3px double rgb(93,191,156) ">
         Bizda mavjud kurslar</h1>
 
-      <div class="container py-5">
-        <div class="row mt-5 mb-0 pt-5 gap-5 ">
-          <div class="col-12 v-col-md-3" v-for="course in courses" :key="course.id">
+      <div class="container py-5"
+      data-aos="zoom-out-up">
+        <div class="row mt-5 mb-0 pt-5 gap-5 " data-aos="zoom-out-up">
+          <div class="col-12 v-col-md-3" v-for="course in courses" :key="course.id" data-aos="zoom-out-up">
             <div class="card w-100 shadow-lg rounded-5 ">
               <div class="card-body hover-shadow ">
 
@@ -38,6 +39,7 @@ export default {
   components: {
     v_row,
   },
+  
   data() {
     return {
   

@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row mt-5">
       <div class="col-3 v-col-md-3 mt-3" v-for="info in infos" :key="info.id">
-        <div class="box  d-flex justify-content-center">
+        <div class="box  d-flex justify-content-center" data-aos="zoom-out-up">
           <img :src="info.image" alt="" @click="openModal(info.id)">
         </div>
       </div>
@@ -12,74 +12,82 @@
       <Transition :duration="550" name="nested">
         <div class=" jaxon" v-show="show">
           <div class="modal-content1 rounded-6">
-            <i class="fas fa-times close1 fs-3 text-light"  @click="show = false"></i> 
-            <h1 ref='heading' class=" text-light h11"></h1>
-            <p ref='demo' class="demo"></p>
+            <a class="fas fa-times close1 fs-3 text-light" @click="toggles" href="#jaxon"></a>
+            <h1 class=" text-light h11"></h1>
+            <p class="demo"></p>
           </div>
         </div>
-
       </Transition>
-
     </div>
   </div>
 </template>
 <script>
+import { onMounted, ref } from 'vue'
+import { useStore } from '../store/store.js'
 
 export default {
-  data() {
-    return {
-      dialog: false,
-      show: false,
-      infos: [
-        {
-          id: 1,
-          name: 'Begesame',
-          title: 'Senyor dasturchi 5 yilik tajriba  yuqori natijalarga erishgan jamo etakchisi',
-          image: new URL('../assets/john-torcasio-tgVm0tkbf1U-unsplash.png', import.meta.url).href
-        },
 
-        {
-          id: 2,
-          name: 'Jaxon',
-          title: 'fdsfdsfsdfdsfdssss',
-          image: new URL('../assets/pexels-italo-melo-2379004 (1).png', import.meta.url).href
-        },
+  setup() {
+    const store = useStore()
+    let show = ref(false)
+    let dialog = ref(false)
+    let infos = ref([
+      {
+        id: 1,
+        name: 'Begesame',
+        title: 'Senyor dasturchi 5 yilik tajriba  yuqori natijalarga erishgan jamo etakchisi',
+        image: new URL('../assets/john-torcasio-tgVm0tkbf1U-unsplash.png', import.meta.url).href
+      },
 
-        {
-          id: 3,
-          name: 'nimdafdsa',
-          title: 'fdsfdsfsdfdsfdsaaa',
-          image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
-        },
-        {
-          id: 4,
-          name: 'nimdafdsa',
-          title: 'fdsfdsfsdfdsfdswsedasedas',
-          image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
-        },
-        {
-          id: 5,
-          name: 'nimdafdsa',
-          title: 'fdsfdsfsdfdsfdswwwww',
-          image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
-        },
-      ],
-    };
+      {
+        id: 2,
+        name: 'Jaxon',
+        title: 'fdsfdsfsdfdsfdssss',
+        image: new URL('../assets/pexels-italo-melo-2379004 (1).png', import.meta.url).href
+      },
 
-  },
+      {
+        id: 3,
+        name: 'nimdafdsa',
+        title: 'fdsfdsfsdfdsfdsaaa',
+        image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
+      },
+      {
+        id: 4,
+        name: 'nimdafdsa',
+        title: 'fdsfdsfsdfdsfdswsedasedas',
+        image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
+      },
+      {
+        id: 5,
+        name: 'nimdafdsa',
+        title: 'fdsfdsfsdfdsfdswwwww',
+        image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
+      },
+    ])
 
-  methods: {
-    openModal(id) {
-
-
-      this.infos.forEach((el) => {
+    let openModal = (id, event) => {
+      infos.value.forEach((el) => {
         if (el.id == id) {
-          this.show = !this.show
-          this.$refs.heading.innerHTML = el.name
-          this.$refs.demo.innerHTML = el.title
+          show.value = !show.value
         }
       })
+
+      store.isActive = false
+
+
     }
+
+    let toggles = () => {
+      show.value = false
+      store.isActive = true
+      document.body.style.cssText = 'overflow-y: auto; height:auto;'
+
+    }
+
+    let name = store.isActive
+
+    return { name, openModal, show, dialog, infos, toggles }
   },
 
 
@@ -133,9 +141,6 @@ export default {
 .close1:focus {
   color: rgb(105, 104, 104);
   text-decoration: none;
-}
-.close1{
-  transition: .2s;
 }
 
 .jaxon {

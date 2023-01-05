@@ -1,14 +1,19 @@
 <template>
-<Home></Home>
-<KurslarXaqida></KurslarXaqida>
-<Center></Center>
-<Teacher></Teacher>
-<end></end>
-<footer2></footer2>
+
+<Home v-if="store.isActive" ></Home>
+<KurslarXaqida v-if="store.isActive"></KurslarXaqida>
+<Center v-if="store.isActive"></Center>
+<span id="jaxon"></span>
+<Teacher ></Teacher>
+<Kurs></Kurs>
+<end ></end>
+<footer2 ></footer2>
+
 
 </template>
  
 <script>
+import { useStore } from './store/store'
 
 
 import footer2 from './components/Footer1.vue'
@@ -29,9 +34,19 @@ export default {
     end,
     footer2,
   },
+
+  setup(){
+    let store = useStore()
+    return {store}
+  },
+
   data() {
     return {};
   },
+
+  mounted(){
+    AOS.init()
+  }
 };
 
 </script>
@@ -39,7 +54,9 @@ export default {
 <style >
 
 body{
-  background: rgb(255, 255, 255);}
+background: rgb(255, 255, 255);
+scroll-behavior: auto;
+}
 
 
 </style>
