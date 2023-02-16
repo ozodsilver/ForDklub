@@ -1,7 +1,7 @@
 <template>
 
-<Home v-if="store.isActive" ></Home>
-<KurslarXaqida v-if="store.isActive" id="mavjudKurslar"></KurslarXaqida>
+<Home  ></Home>
+<KurslarXaqida ></KurslarXaqida>
 <span id="ishlar"></span>
 <Center v-if="store.isActive"></Center>
 <span id="jaxon"></span>
@@ -16,8 +16,6 @@
  
 <script>
 import { useStore } from './store/store'
-
-
 import footer2 from './components/Footer1.vue'
 import end from './components/end.vue'
 import Home from'./components/Home.vue'
@@ -35,6 +33,7 @@ export default {
     Center,
     end,
     footer2,
+ 
   },
 
   setup(){

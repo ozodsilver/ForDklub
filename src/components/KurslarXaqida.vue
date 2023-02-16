@@ -12,9 +12,8 @@
       data-aos="zoom-out-up">
         <div class="row mt-5 mb-0 pt-5 gap-5 " data-aos="zoom-out-up">
           <div class="col-12 v-col-md-3" v-for="course in courses" :key="course.id" data-aos="zoom-out-up">
-            <div class="card w-100 shadow-lg rounded-5 ">
-              <div class="card-body hover-shadow ">
-
+            <div class="card w-100 shadow-lg rounded-5 box1">       
+              <div class="card-body hover-shadow box"> 
                 <h5 class="card-title">{{ course.course }}</h5>
                 <p class="card-text">{{ course.title }}</p>
                 <v_row></v_row>
@@ -48,13 +47,40 @@ export default {
         {
           id: 1,
           course: 'Frontend',
-          title: 'lorem lorem'
+          title: '',
         },
 
         {
           id: 2,
           course: 'Backend',
-          title: 'lorem lorem'
+          title: ''
+        },
+        
+        {
+          id: 3,
+          course: 'Mobile dasturlash (Flutter)',
+          title: ''
+        },
+        
+        {
+          id: 4,
+          course: 'Grafik dizayn',
+          title: ''
+        },
+        {
+          id: 5,
+          course: '3D max',
+          title: ''
+        },
+        {
+          id: 6,
+          course: 'Engilish',
+          title: ''
+        },
+        {
+          id: 7,
+          course: 'Foundation',
+          title: ''
         }
       ]
     };
@@ -63,6 +89,7 @@ export default {
 </script>
 
 <style scoped>
+
 *{
   cursor: pointer;
 }
@@ -93,56 +120,13 @@ i {
 
 .card {
   transition: 0.3s;
-  width: 300px !important;
+  width: 330px !important;
+  height: 130px !important;
   border-left: 4px solid rgba(121, 138, 201, 1);
 }
 
 .card-title {
   color: rgba(92, 94, 110, 1);
   font-weight: bold;
-}
-
-.title {
-  color: rgba(92, 94, 110, 1);
-  font-weight: bold;
-  font-size: 30px;
-  position: relative;
-  z-index: 333;
-}
-
-.h12 {
-  position: relative;
-  z-index: 333;
-  color: rgba(92, 94, 110, 1);
-  font-weight: bold;
-  font-size: 30px;
-  position: relative;
-  z-index: 333;
-}
-
-.h12 span {
-  color: rgba(92, 14, 98, 1) !important;
-}
-
-.btn1 {
-  color: rgba(92, 14, 98, 1);
-  border: none;
-  background-color: white;
-}
-
-.box {
-  width: 270px;
-  height: 200px;
-}
-
-.title::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: -20px;
-  width: 88px;
-  height: 91px;
-  border-radius: 30px;
-  background-color: rgba(220, 138, 224, 0.336);
 }
 </style>

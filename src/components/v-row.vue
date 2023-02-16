@@ -9,7 +9,7 @@
         <v-btn
           color="primary"
           v-bind="props"
-           class=" v-btn1 ms-3">
+           class=" v-btn1 ms-3 w-25 mt-3 pt-2">
         Sign up
         </v-btn>
       </template>

@@ -1,9 +1,10 @@
 <template>
-  <div class="container-fluid top" data-aos="zoom-out-up">
-    <h1 class="h1 w-50 py-2 pb-5 bag">
+   <h1 class="h1 w-50 py-2 pb-5 bag">
       Kurslar uchun texnalogiyalar
     </h1>
-    <div class="container row w-100 mt-5 pt-5">
+  <div class="container" data-aos="zoom-out-up">
+   
+    <div class="container row mt-5 pt-5">
       <div class="col-12 col-md-4">
         <div>
           <input type="radio" id="one" value="One" v-model="picked" class="form-check-input fs-1" />
@@ -20,6 +21,10 @@
         <div>
           <input type="radio" id="five" value="five" v-model="picked" class="form-check-input fs-1 radi" />
           <label for="five" class="form-check-label fs-5">Grafik dizayn</label>
+        </div>
+        <div>
+          <input type="radio" id="sixe" value="sixe" v-model="picked" class="form-check-input fs-1 radi" />
+          <label for="sixe" class="form-check-label fs-5">3D max</label>
         </div>
       </div>
 
@@ -48,7 +53,7 @@
           </div>
         </div>
 
-        <div class="mt-5 d-flex justify-content-around">
+        <div class="mt-5 d-flex justify-content-around ">
           <div class="card1 card" :class="{ rang2: picked == 'two' }">
             <img src="../assets/c-.png" alt="" class="d-block m-auto" />
           </div>
@@ -70,8 +75,18 @@
           <div class="card1 card" :class="{ rang2: picked == 'five' }">
             <img src="../assets/figma.png" alt="" class="d-block m-auto" />
           </div>
-        </div>
 
+         
+        </div>
+        <div class=" d-flex justify-content-around mt-5">
+         <div class="card1 card" :class="{ rang2: picked == 'sixe' }">
+            <img src="../assets/3Dmax.jpeg" alt="" class="d-block m-auto" />
+          </div>
+
+          <div class="card1 card" :class="{ rang2: picked == 'sixe' }">
+            <img src="../assets/blender.jpg" alt="" class="d-block m-auto" />
+          </div></div>
+       
        
       </div>
     </div>
@@ -170,10 +185,6 @@ img {
   position: relative;
   bottom: 35px;
   left: 56px;
-}
-
-.react {
-  color: rgb(73, 118, 209);
 }
 
 i {
