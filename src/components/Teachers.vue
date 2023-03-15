@@ -38,6 +38,7 @@ function closeModal() {
 
 const store = useStore()
 let show = ref(false)
+
 let dialog = ref(false)
 let infos = ref([
   {
