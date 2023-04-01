@@ -1,70 +1,72 @@
-
 <template>
-   <h1 class="h1 w-25 py-2 h1 "
-      style="background: rgb(93,191,156);
-       background: linear-gradient(13deg, rgba(93,191,156,1) 0%, rgba(53,73,94,1) 56%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom:3px double rgb(93,191,156)" >
-      Bizning ishlar</h1>
-   <v-carousel cycle height="300" hide-delimiter-background show-arrows="hover" class=" car" data-aos="zoom-out-up">
-      <v-carousel-item v-for="(slide, i) in slides" :key="i">
-         <v-sheet height="100%" class="box">
-            <div class="d-flex fill-height justify-center align-center box" >
-               <div class="text-h2">
-                  <h1 class="text1 fw-bold salom1">Payment</h1>
-                  <h1 class="text2 fw-bold salom2">Gets Easier</h1>
-                  <p class="text-muted p w-75 fw-bold">{{ qiganish[i] }}</p>
-               </div>
-            </div>
-         </v-sheet>
-      </v-carousel-item>
-   </v-carousel>
+  <div class="container">
+    <Carousel :items-to-show="2.5" :wrap-around="true" :autoplay="2000">
+      <Slide v-for="slide in images" :key="slide">
+        <div class="carousel__item">
+          <img :src="slide.link" alt="" class="img-fluid" />
+        </div>
+      </Slide>
+
+      <template #addons>
+        <Navigation />
+        <Pagination />
+      </template>
+    </Carousel>
+  </div>
 </template>
 
 <script>
-AOS.init()
-export default {
-   data() {
-      return {
-         colors: [
-            'indigo',
-            'warning',
-            'pink darken-2',
-            'red lighten-1',
-            'deep-purple accent-4',
-         ],
-         slides: [
-            'First',
-            'Second',
-            'Third',
-            'Fourth',
-            'Fifth',
+import { defineComponent } from "vue";
+import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 
-         ],
-         qiganish: [
-            'manashuni qiganmiz',
-            'vabuni ham',
-            'va yanna buni'
-         ]
-      }
-   },
-}
+import "../../node_modules/vue3-carousel/dist/carousel.css";
+
+export default defineComponent({
+  name: "Basic",
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+
+  data() {
+    return {
+      images: [
+        {
+          id: 1,
+          link: "https://arsitagx-master.s3.ap-southeast-1.amazonaws.com/img_medium/5552/5368/37585/photo-8-springhill-townhouse-desain-arsitek-oleh-img-architects.jpeg",
+        },
+        {
+          id: 2,
+          link: "https://arsitagx-master.s3.ap-southeast-1.amazonaws.com/img_medium/5552/5368/37585/photo-8-springhill-townhouse-desain-arsitek-oleh-img-architects.jpeg",
+        },
+      ],
+    };
+  },
+});
 </script>
 
 <style scoped>
-.p {
-   font-size: 30px;
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: var(--vc-clr-primary);
+  color: var(--vc-clr-white);
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.text1 {
-   color: #857885;
+.carousel__slide {
+  padding: 10px;
 }
 
-.text2 {
-   color: #5C0E62;
-}
-
-.h1 {
-   margin-top: 40px;
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 5px solid white;
 }
 </style>
-
-

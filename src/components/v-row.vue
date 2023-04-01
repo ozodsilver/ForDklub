@@ -7,9 +7,9 @@
     >
       <template v-slot:activator="{ props }">
         <v-btn
-          color="primary"
+          color="success"
           v-bind="props"
-           class=" v-btn1 ms-3 w-25 mt-3 pt-2">
+           class=" ms-3 w-25 mt-3  ">
         Sign up
         </v-btn>
       </template>

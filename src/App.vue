@@ -8,6 +8,7 @@
 <span id="teachers"></span>
 <Teacher ></Teacher>
 <Kurs></Kurs>
+<Sertifikats></Sertifikats>
 <end ></end>
 <footer2 ></footer2>
 
@@ -23,6 +24,7 @@ import KurslarXaqida from'./components/KurslarXaqida.vue'
 import Teacher from'./components/Teachers.vue'
 import Center from './components/center.vue'
 import Kurs from "./components/Kurs.vue"
+import Sertifikats from './components/Sertifikats.vue'
 
 export default {
   components: { 
@@ -33,6 +35,7 @@ export default {
     Center,
     end,
     footer2,
+    Sertifikats
  
   },
 

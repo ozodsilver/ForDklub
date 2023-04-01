@@ -1,14 +1,17 @@
 <template>
-   <h1 class="h1 w-50 py-2 pb-5 bag">
+  
+    <h1 class=" ml-5 mt-5 w-50 py-2 pb-5 bag">
       Kurslar uchun texnalogiyalar
     </h1>
-  <div class="container" data-aos="zoom-out-up">
+  <div class="container " data-aos="zoom-out-up">
    
-    <div class="container row mt-5 pt-5">
-      <div class="col-12 col-md-4">
+    <div class="container  row mt-5 pt-5">
+      <div class="col-12 mt-5 col-md-4">
         <div>
           <input type="radio" id="one" value="One" v-model="picked" class="form-check-input fs-1" />
           <label for="one" class="form-check-label fs-5">Frontend dasturlash</label>
+
+          
         </div>
         <div>
           <input type="radio" id="two" value="two" v-model="picked" class="form-check-input fs-1" />
@@ -28,7 +31,7 @@
         </div>
       </div>
 
-      <div class="box col-md-8 col-12 pad">
+      <div class="box col-md-8 mt-5 col-12 pad">
         <div class="mt-5 d-flex justify-content-around">
           <div class="card1 card box1" :class="{ rang: picked == 'One' }">
             <img src="../assets/html.png" alt="" class="d-block m-auto" />
@@ -91,7 +94,6 @@
       </div>
     </div>
   </div>
-  <br />
 </template>
 <script>
 AOS.init()

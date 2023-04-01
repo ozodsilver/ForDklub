@@ -90,8 +90,8 @@
           </Transition>
         </div>
       </div>
-      <div class="col-12 col-md-7 d-none d-md-block" style="margin-top: -40%">
-        <img src="../assets/jaxon.svg" alt="" class="w-100 h-100 img-fluid" />
+      <div class="col-12 col-md-7  d-md-block" style="margin-top: -45%">
+        <img src="../assets/jaxon.png" alt="" class="w-100 h-100 " />
       </div>
     </div>
   </div>

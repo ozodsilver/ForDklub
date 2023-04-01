@@ -1,10 +1,11 @@
 <template>
-  <h1 class="w-25 fw-light  ms-5 py-3 color">Teachers</h1>
+  <h1 class="w-25 fw-light  ms-5 py-3 color">Kurs Mentorlari</h1>
   <div class="container">
     <div class="row mt-5">
       <div class="col-3 v-col-md-3 mt-3" v-for="info in infos" :key="info.id">
         <div class="box  d-flex justify-content-center" data-aos="zoom-out-up">
-          <img :src="info.image" alt="" @click="openModal(info.id)">
+          <img :src="info.image" alt="" @click="openModal(info.id)" class="img-fluid w-75">
+        
         </div>
        
       
@@ -14,6 +15,7 @@
       <div class="modal-content1  rounded-6" v-show='modal' v-on-click-outside="closeModal">
         <h1 class="text-light h11" id="modal"></h1>
         <p class="demo"></p>
+      <p><i class="fas fa-phone-alt text-success"></i>  <span id="tel" class="text-white"></span> </p>
       </div>
       
       
@@ -43,46 +45,56 @@ let dialog = ref(false)
 let infos = ref([
   {
     id: 1,
-    name: 'Begesame',
-    title: 'Senyor dasturchi 5 yilik tajriba  yuqori natijalarga erishgan jamo etakchisi',
-    image: new URL('../assets/john-torcasio-tgVm0tkbf1U-unsplash.png', import.meta.url).href
+    name: 'Shakhzod Toshboyev',
+    title: '4 yil ish tajribasiga ega middle Mobile software developer',
+    image: new URL('../assets/xodim/shakhzod.jpg', import.meta.url).href,
+    tel:'+998 99 670 03 25'
   },
 
   {
     id: 2,
     name: 'Jaxon',
     title: 'fdsfdsfsdfdsfdssss',
-    image: new URL('../assets/pexels-italo-melo-2379004 (1).png', import.meta.url).href
+    image: new URL('../assets/xodim/shakhzod.jpg', import.meta.url).href,
+    tel:'+998 99 670 03 25'
   },
 
   {
     id: 3,
     name: 'nimdafdsa',
     title: 'fdsfdsfsdfdsfdsaaa',
-    image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
+    image: new URL('../assets/xodim/shakhzod.jpg', import.meta.url).href,
+    tel:'+998 99 670 03 25'
   },
   {
     id: 4,
     name: 'nimdafdsa',
     title: 'fdsfdsfsdfdsfdswsedasedas',
-    image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
+    image: new URL('../assets/xodim/shakhzod.jpg', import.meta.url).href,
+    tel:'+998 99 670 03 25'
   },
   {
     id: 5,
     name: 'nimdafdsa',
     title: 'fdsfdsfsdfdsfdswwwww',
-    image: new URL('../assets/pexels-italo-melo-2379004 (2).png', import.meta.url).href
+    image: new URL('../assets/xodim/shakhzod.jpg', import.meta.url).href,
+    tel:'+998 99 670 03 25'
   },
 ])
 
 let openModal = (id, event) => {
   modal.value = true
   let modal1 = document.querySelector(".h11");
+let demo = document.querySelector(".demo");
+let tel = document.querySelector("#tel");
+
   console.log(modal1);
   infos.value.forEach((el) => {
     console.log(modal1);
     if (el.id == id) {
       modal1.innerHTML = el.name;
+      demo.innerHTML = el.title;
+      tel.innerHTML = el.tel;
       show.value = !show.value
 
     }
@@ -127,12 +139,13 @@ let openModal = (id, event) => {
   -webkit-backdrop-filter: blur(10px);
   border: 1px rgb(255, 255, 255, 0.18);
   margin-left: -10px;
-  padding: 30px;
+  padding: 80px;
   border: 1px solid #888;
   width: 70%;
   position: fixed;
   top: 230px;
   z-index: 333;
+ 
 }
 
 .color {
