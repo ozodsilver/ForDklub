@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="ml-5 bag">Sertifikatlar</h1>
+        <h1 class="ml-5 bag w-25">Sertifikatlar</h1>
 <div class="container py-5">
 <div class="row">
 <div class="col-4" v-for="sertifikat of sertifikats" :key="sertifikat.id">
@@ -37,10 +37,10 @@ let sertifikats = ref([
 
 
 .bag {
-  background: rgb(93, 191, 156);
-  background: linear-gradient(13deg,
-      rgba(93, 191, 156, 1) 0%,
-      rgba(53, 73, 94, 1) 56%);
-  border-bottom: 3px double rgb(93, 191, 156);
+    background: rgb(93, 191, 156);
+  background: linear-gradient(13deg, rgba(93, 191, 156, 1) 0%, rgba(53, 73, 94, 1) 56%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px double rgb(93, 191, 156)
 }
 </style>
