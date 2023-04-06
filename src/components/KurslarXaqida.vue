@@ -1,132 +1,81 @@
 <template>
-
-  <div class="container-fluid my-4">
-
-    <div class="container-fluid bosscard">
-      <h1 class="py-5  w-25 my-5"
-        style="background: rgb(93,191,156);
-       background: linear-gradient(13deg, rgba(93,191,156,1) 0%, rgba(53,73,94,1) 56%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom:3px double rgb(93,191,156) ">
-        Bizda mavjud kurslar</h1>
-
-      <div class="container py-5"
-      data-aos="zoom-out-up">
-        <div class="row mt-5 mb-0 pt-5 gap-5 " data-aos="zoom-out-up">
-          <div class="col-12 v-col-md-3" v-for="course in courses" :key="course.id" data-aos="zoom-out-up">
-            <div class="card w-100 shadow-lg rounded-5 box1">       
-              <div class="card-body hover-shadow box"> 
-                <h5 class="card-title">{{ course.course }}</h5>
-                <p class="card-text">{{ course.title }}</p>
-                <v_row></v_row>
-              </div>
-            </div>
+  <div class="container">
+  <h1 class="my-5">Bizda Mavjud kurslar</h1>
+    <div class="row">
+      <div class="col-4 mt-5" v-for="info in infos" :key="info.id">
+        <div
+          class="card mt-5 text-center shadow-lg ripple  bg-gradient "
+          data-mdb-ripple-color="info"
+          style="border-top-left-radius: 70px; border-bottom-right-radius: 70px;"
+        >
+          <div class="card-header text-start fw-bold text-end">
+            {{ info.courseName }}
           </div>
-
+          <div class="card-body">
+           
+            <p class="card-text">
+              {{ info.about }}
+            </p>
+            <a href="#" class="btn btn-success opacity-80 rounded-pill d-block bg-gradient">Kurs haqida</a>
+          </div>
+          <div class="card-footer text-muted">Mavjud guruhlar : {{ info.groups }}</div>
         </div>
       </div>
-
-
     </div>
-
-
   </div>
 </template>
 
-<script>
-import v_row from "./v-row.vue";
+<script setup>
+import { ref, reactive, onMounted } from "vue";
 
-export default {
-  components: {
-    v_row,
+let infos = reactive([
+  {
+    id: 1,
+    courseName: "Mobile dasturlash",
+    imageUrl: new URL("../assets/java.png", import.meta.url),
+    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
+    groups: 4,
   },
-  
-  data() {
-    return {
-  
-   
-      courses: [
-        {
-          id: 1,
-          course: 'Frontend',
-          title: '',
-        },
 
-        {
-          id: 2,
-          course: 'Backend',
-          title: ''
-        },
-        
-        {
-          id: 3,
-          course: 'Mobile dasturlash (Flutter)',
-          title: ''
-        },
-        
-        {
-          id: 4,
-          course: 'Grafik dizayn',
-          title: ''
-        },
-        {
-          id: 5,
-          course: '3D max',
-          title: ''
-        },
-        {
-          id: 6,
-          course: 'Engilish',
-          title: ''
-        },
-        {
-          id: 7,
-          course: 'Foundation',
-          title: ''
-        }
-      ]
-    };
+  {
+    id: 2,
+    courseName: "Mobile dasturlash",
+    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
+    imageUrl: new URL("../assets/java.png", import.meta.url),
+    groups: 2,
   },
-};
+
+  {
+    id: 3,
+    courseName: "Frontend",
+    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
+    imageUrl: new URL("../assets/java.png", import.meta.url),
+    groups: 7,
+  },
+
+  {
+    id: 4,
+    courseName: "Backend",
+    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
+    imageUrl: new URL("../assets/java.png", import.meta.url),
+    groups: 4,
+  },
+
+  {
+    id: 5,
+    courseName: "Grafik Design",
+    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
+    imageUrl: new URL("../assets/java.png", import.meta.url),
+    groups: 1,
+  },
+]);
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-*{
-  cursor: pointer;
-}
-.dialog-bottom-transition-enter-active,
-.dialog-bottom-transition-leave-active {
-  transition: 2.5s ease-in-out;
+.card{
+  background: rgb(248, 240, 240) !important ;
+background: linear-gradient(90deg, rgba(254, 254, 254, 0.869) 10%, rgba(217, 249, 240, 0.686) 100%) !important;
 }
 
-.bottom {
-  margin-bottom: 80px;
-}
-
-.battom1 {
-  margin-bottom: 50px !important;
-}
-
-@media screen and (max-width: 800px) {
-
-  .box {
-    margin-top: 60px;
-    margin: auto;
-  }
-}
-
-i {
-  color: rgba(89, 21, 103, 1);
-}
-
-.card {
-  transition: 0.3s;
-  width: 330px !important;
-  height: 130px !important;
-  border-left: 4px solid rgba(121, 138, 201, 1);
-}
-
-.card-title {
-  color: rgba(92, 94, 110, 1);
-  font-weight: bold;
-}
 </style>

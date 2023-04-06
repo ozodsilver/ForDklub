@@ -26,13 +26,13 @@
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#mavjudKurslar">Bizda mavjud kurslar</a>
+            <a class="nav-link" href="#mavjudKurslar">Kurslar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#ishlar">Bizning ishlar</a>
+            <a class="nav-link" href="#ishlar">DK projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#teachers">Teachers</a>
+            <a class="nav-link" href="#teachers">Mentorlar</a>
           </li>
         </ul>
         <!-- Left links -->
@@ -64,7 +64,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-5 col-12 position-relative" style="margin-top: -20%">
+      <div class="col-md-5 col-12 position-relative" style="margin-top: -25%">
         <div class="play-btn-box" v-if="show" @click="show = !show" style="cursor:pointer">
           <div class="play-button"><i class="fas fa-play text-light" id="play2"></i></div>
           <div class="play-btn-line1" id="line1">
@@ -79,9 +79,10 @@
           <Transition name="bounce">
             <iframe
               v-if="!show"
-              class="w-100 h-50 rounded-5"
+              class="w-100 rounded-5"
               src="https://www.youtube.com/embed/cUuUMVQzpjI"
               title="YouTube video player"
+              height="300px"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -90,8 +91,8 @@
           </Transition>
         </div>
       </div>
-      <div class="col-12 col-md-7  d-md-block" style="margin-top: -45%">
-        <img src="../assets/jaxon.png" alt="" class="w-100 h-100 " />
+      <div class="col-12 col-md-7  d-md-block" style="margin-top: -30%;">
+        <img src="../assets/SVGdk.png" alt="" class=" d-block m-auto w-100 img-fluid " />
       </div>
     </div>
   </div>
@@ -251,11 +252,12 @@ a:hover {
 }
 
 .bounce-enter-active {
-  animation: bounce-in 0.6s;
-  
+  animation: bounce-in 2s;
+ 
 }
 .bounce-leave-active {
  display: none;
+
 }
 @keyframes bounce-in {
   0% {
@@ -263,10 +265,11 @@ a:hover {
     
   }
   50% {
-    transform: scale(1.15);
+    transform: translateX(-900px) scale(1.5) rotate(-45deg);
   }
   100% {
     transform: scale(1);
+   
   }
 }
 </style>
