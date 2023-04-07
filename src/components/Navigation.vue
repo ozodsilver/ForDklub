@@ -74,11 +74,11 @@
 
         <div class="h-100">
           <Transition name="bounce">
-          <i class="fas fa-window-close float-right fa-2x" v-if="!show"  @click="show = !show"></i>
+          <i class="fas fa-window-close float-right fa-2x" v-show="!show"  @click="show = !show"></i>
           </Transition>
           <Transition name="bounce">
             <iframe
-              v-if="!show"
+              v-show="!show"
               class="w-100 rounded-5"
               src="https://www.youtube.com/embed/cUuUMVQzpjI"
               title="YouTube video player"
@@ -226,28 +226,28 @@ a:hover {
 }
 
 #line1 {
-  -webkit-animation: rotation 4s infinite linear;
+ animation: rotation 4s infinite linear;
 }
 
-@-webkit-keyframes rotation {
+@keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
+   transform: rotate(359deg);
   }
 }
 
 #line2 {
-  -webkit-animation: rotation1 3s infinite linear;
+ animation: rotation1 3s infinite linear;
 }
 
-@-webkit-keyframes rotation1 {
+@keyframes rotation1 {
   from {
-    -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
+   transform: rotate(359deg);
   }
 }
 

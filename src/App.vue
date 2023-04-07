@@ -518,42 +518,21 @@
     </div>
   </div>
 
-  <!-- <div v-show = 'loader'> -->
-
-  <Home v-if="loader"></Home>
-  <KurslarXaqida v-if="loader"></KurslarXaqida>
-  <Center v-if="loader"></Center>
-  <Teacher v-if="loader"></Teacher>
-  <Kurs v-if="loader"></Kurs>
-  <Sertifikats v-if="loader"></Sertifikats>
-  <end v-if="loader"></end>
-  <footer2 v-if="loader"></footer2>
-
-  <!-- </div> -->
+  <router-view v-show="loader"></router-view>
 </template>
 
 <script setup>
-import footer2 from "./components/Footer1.vue";
-import end from "./components/end.vue";
-import Home from "./components/Home.vue";
-import KurslarXaqida from "./components/KurslarXaqida.vue";
-import Teacher from "./components/Teachers.vue";
-import Center from "./components/center.vue";
-import Kurs from "./components/Kurs.vue";
-import Sertifikats from "./components/Sertifikats.vue";
-
-import { onMounted,ref } from 'vue'
-let loader = ref(false)
-setTimeout(()=>{
-  loader.value = true
-
-},3000)
+import { onMounted, ref } from "vue";
+let loader = ref(false);
+setTimeout(() => {
+  loader.value = true;
+}, 3500);
 </script>
 
 <style>
 body {
   background: rgb(255, 255, 255);
-  scroll-behavior: auto;
+
 }
 
 /* The loader container */

@@ -4,11 +4,11 @@
     <div class="row">
       <div class="col-4 mt-5" v-for="info in infos" :key="info.id">
         <div
-          class="card mt-5 text-center shadow-lg ripple  bg-gradient "
+          class="card mt-5 text-center shadow-lg ripple p-3  bg-gradient "
           data-mdb-ripple-color="info"
           style="border-top-left-radius: 70px; border-bottom-right-radius: 70px;"
         >
-          <div class="card-header text-start fw-bold text-end">
+          <div class="text-start fw-bold text-end">
             {{ info.courseName }}
           </div>
           <div class="card-body">
@@ -16,7 +16,7 @@
             <p class="card-text">
               {{ info.about }}
             </p>
-            <a href="#" class="btn btn-success opacity-80 rounded-pill d-block bg-gradient">Kurs haqida</a>
+            <router-link to="/regestration" class="btn btn-success opacity-80 rounded-pill d-block bg-gradient">Kurs haqida</router-link>
           </div>
           <div class="card-footer text-muted">Mavjud guruhlar : {{ info.groups }}</div>
         </div>

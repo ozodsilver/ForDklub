@@ -1,22 +1,21 @@
 import  { createRouter, createWebHashHistory } from 'vue-router'
-import Header from '../components/Home.vue'
-import KurslarXaqida from '../components/KurslarXaqida.vue'
-
+import Main from '../components/mainComp.vue'
+import Regestration from '../components/regestrationForCourses.vue'
 
 const routes =  [
     {
         path:'/',
-        name:'link1',
-        component:Header
+        name:'Main',
+        component:Main
     },
-
-
     {
-        path:'/Footers',
-        name:'link2',
-        component:KurslarXaqida
+        path:'/regestration',
+        name:'regestration',
+        component:Regestration
     },
 
+
+    
 ]
 
 
@@ -27,4 +26,4 @@ let router = createRouter({
 
 
 
-export default router
+export default router;

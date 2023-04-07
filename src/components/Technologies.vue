@@ -3,7 +3,7 @@
     <h1 class=" ml-5 mt-5 w-50 py-2 pb-5 bag">
       Kurslar uchun texnalogiyalar
     </h1>
-  <div class="container " data-aos="zoom-out-up">
+  <div class="container " >
    
     <div class="container  row mt-5 pt-5">
       <div class="col-12 mt-5 col-md-4">
@@ -96,7 +96,7 @@
   </div>
 </template>
 <script>
-AOS.init()
+
 export default {
   data() {
     return {

@@ -1,28 +1,27 @@
 <template>
-  <div class="container">
-    <Carousel :items-to-show="2.5" :wrap-around="true" :autoplay="2000">
-      <Slide v-for="slide in images" :key="slide">
-        <div class="carousel__item">
-          <img :src="slide.link" alt="" class="img-fluid" />
-        </div>
-      </Slide>
+  <div class="container-fluid " style="margin-top: 100px ">
+    <Carousel ref="carousel" v-model="currentSlide" :items-to-show="2.5" :wrap-around="true">
+    <Slide v-for="image in images" :key="image.id">
+      <div class="carousel__item">
+      <img :src="image.links" alt=" " class="img-fluid">
+      </div>
+    </Slide>
+    <template #addons>
+      <Navigation />
+      <Pagination />
+    </template>
+  </Carousel>
 
-      <template #addons>
-        <Navigation />
-        <Pagination />
-      </template>
-    </Carousel>
+
   </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
-
+import { defineComponent } from 'vue'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import "../../node_modules/vue3-carousel/dist/carousel.css";
-
+import 'vue3-carousel/dist/carousel.css'
 export default defineComponent({
-  name: "Basic",
   components: {
     Carousel,
     Slide,
@@ -32,18 +31,21 @@ export default defineComponent({
 
   data() {
     return {
+      currentSlide: 0,
       images: [
         {
           id: 1,
-          link: "https://arsitagx-master.s3.ap-southeast-1.amazonaws.com/img_medium/5552/5368/37585/photo-8-springhill-townhouse-desain-arsitek-oleh-img-architects.jpeg",
+          links: new URL("../assets/3Dmax.jpeg", import.meta.url).href
         },
         {
           id: 2,
-          link: "https://arsitagx-master.s3.ap-southeast-1.amazonaws.com/img_medium/5552/5368/37585/photo-8-springhill-townhouse-desain-arsitek-oleh-img-architects.jpeg",
+          links: new URL("../assets/SVGdk.png", import.meta.url).href
         },
       ],
     };
   },
+
+
 });
 </script>
 
@@ -51,7 +53,6 @@ export default defineComponent({
 .carousel__item {
   min-height: 200px;
   width: 100%;
-  background-color: var(--vc-clr-primary);
   color: var(--vc-clr-white);
   font-size: 20px;
   border-radius: 8px;

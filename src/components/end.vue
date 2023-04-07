@@ -6,7 +6,7 @@
 
 
  <script>
-  AOS.init()
+
  </script>
 
  <style>
