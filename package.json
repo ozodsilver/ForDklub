@@ -17,8 +17,7 @@
     "sass": "^1.57.1",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
-    "vue3-carousel": "^0.2.12",
-    "vuetify": "^3.0.6"
+    "vue3-carousel": "^0.2.16"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",

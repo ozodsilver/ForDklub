@@ -1,14 +1,16 @@
 <template>
   <h1 class="w-25 fw-light ms-5 py-3 mt-5 color">Kurs Mentorlari</h1>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row mt-5 gap-5 justify-content-evenly">
       <div class="col-3 col-md-4 col-lg-3 parent  mt-5" v-for="info of infos" :key="info.id">
-        <div class="box d-flex justify-content-center" style="height: 550px">
+        <div class="box d-flex justify-content-center" style="height: 400px">
         <img :src="info.icon" alt="" class="w-25 position-absolute rounded" style="left:0px; top:30px">
-          <div class="topInfo p-2">
+          <div class="topInfo flex-column p-3">
             <p>
-              {{ info.title }}
+              {{ info.name }}
             </p>
+
+            <button   @click="openModal(info.id)" class="btn btn-success">About mentor</button>
           </div>
           <img
             :src="info.image"                     
@@ -31,11 +33,15 @@
         v-show="modal"
         v-on-click-outside="closeModal"
       >
-        <h1 class="text-light h11" id="modal"></h1>
+        <h3 class="text-light h11 bg-light text-dark d-inline-block px-4 py-2 rounded" id="modal"></h3>
         <p class="demo"></p>
         <p>
-          <i class="fas fa-phone-alt text-success"></i>
+          <i class="fas fa-phone-alt text-dark"></i> 
           <span id="tel" class="text-white"></span>
+         
+<a href="tg://resolve?domain=tarmanau" class="text-white">
+<br>
+<i class="fab fa-telegram text-dark "></i> Telegram </a>
         </p>
       </div>
     </div>
@@ -60,7 +66,7 @@ let dialog = ref(false);
 
 onMounted(()=>{
   VanillaTilt.init(document.querySelector(".parent"), {
-		max: 25,
+		max: 5,
 		speed: 400,
 
     reset:true,
@@ -72,16 +78,25 @@ onMounted(()=>{
 let infos = ref([
   {
     id: 1,
+    name: "Ozodxon Rabbanaqulov",
+    title: "Frontend: 2 yil  tajribasiga ega middle  software enginer.",
+    image: new URL("../assets/xodim/ozodxon.png", import.meta.url),
+    icon: new URL("../assets/file_type_vue_icon_130078.png", import.meta.url),
+    tel: "+998 99 670 03 25",
+  },
+
+  {
+    id: 2,
     name: "Shakhzod Toshboyev",
-    title: "4 yil ish tajribasiga ega middle Mobile software developer",
+    title: "2 yil ish tajribasiga ega middle mobile software enginer",
     image: new URL("../assets/xodim/shakhzod.png", import.meta.url),
     icon: new URL("../assets/backgroundForCourser/android.png", import.meta.url),
     tel: "+998 99 670 03 25",
   },
 
   {
-    id: 2,
-    name: "Jaxon",
+    id: 3,
+    name: "Omonov Sayidsharifxon",
     title: "fdsfdsfsdfdsfdssss",
     image: new URL("../assets/xodim/sharifxon.png", import.meta.url),
     icon: new URL("../assets/js.png", import.meta.url),
@@ -89,7 +104,7 @@ let infos = ref([
   },
 
   {
-    id: 3,
+    id: 4,
     name: "nimdafdsa",
     title: "fdsfdsfsdfdsfdsaaa",
     image: new URL("../assets/xodim/shakhzod.jpg", import.meta.url),
@@ -97,7 +112,7 @@ let infos = ref([
     tel: "+998 99 670 03 25",
   },
   {
-    id: 4,
+    id: 5,
     name: "nimdafdsa",
     title: "fdsfdsfsdfdsfdswsedasedas",
     image: new URL("../assets/xodim/shakhzod.jpg", import.meta.url),
@@ -105,7 +120,7 @@ let infos = ref([
     tel: "+998 99 670 03 25",
   },
   {
-    id: 5,
+    id: 6,
     name: "nimdafdsa",
     title: "fdsfdsfsdfdsfdswwwww",
     image: new URL("../assets/xodim/shakhzod.jpg", import.meta.url),
@@ -160,21 +175,37 @@ let openModal = (id, event) => {
 }
 
 .modal-content1 {
-  background-color: linear-gradient(
-    135deg,
-    rgb(255, 255, 255, 0.1) rgb(255, 255, 255, 0)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+ 
   border: 1px rgb(255, 255, 255, 0.18);
   margin-left: -10px;
-  padding: 80px;
+  padding:170px 40px;
   border: 1px solid #888;
-  width: 70%;
+  width: 90%;
   position: fixed;
-  top: 30%;
-  left: 15%;
+  top: 25%;
+  left: 6%;
   z-index: 333;
+  background-color: #35495E;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2341B883'/%3E%3Cstop offset='1' stop-color='%2335495E'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%2369EFFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2369EFFF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+
+  &:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('../assets/backgroundForCourser/mock-integrations.svg');
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  }
 }
 
 .color {
@@ -206,24 +237,31 @@ let openModal = (id, event) => {
   //   rgba(16, 47, 175, 0.046) 0%,
   //   rgba(158, 240, 220, 0.26) 100%
   // );
-  box-shadow: 15px 15px 10px  #e4e0e0, 20px 20px 20px  #cbccc6;
+  box-shadow: 15px 15px 10px  #b6b7b7, 20px 20px 20px  #cbccc6;
+border: dashed 5px rgb(12, 182, 134);
+box-sizing: content-box;
 
-  border-radius: 30px;
+  border-radius: 20px;
   position: relative;
   .topInfo {
     width: 100%;
     margin: auto;
-    margin-top: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
     height: 0px;
     position: relative;
     visibility: hidden;
     transition: 0.2s linear;
-    background-color: rgb(65, 65, 65);
+    background-color: #5D5C5C;
     color: white;
     overflow: hidden;
     transform: scale(0);
-    transform-style: preserve-3d;
-  transform: perspective(2000px);
+    position: absolute;
+    z-index:888;
+  bottom: 0;
+  
   }
 
   &:hover .topInfo {
@@ -232,7 +270,9 @@ let openModal = (id, event) => {
     transform: scale(1);
     position: absolute;
     z-index:888;
-    top: 0;
+  bottom: 0;
+  left: 0;
+   
   }
 
 

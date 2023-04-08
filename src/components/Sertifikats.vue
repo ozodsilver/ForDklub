@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="ml-5 bag w-25">Sertifikatlar</h1>
+        <h1 class="py-5 bag px-3 w-25">Sertifikatlar</h1>
 <div class="container py-5">
 <div class="row">
 <div class="col-4" v-for="sertifikat of sertifikats" :key="sertifikat.id">

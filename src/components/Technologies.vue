@@ -1,38 +1,64 @@
 <template>
-  
-    <h1 class=" ml-5 mt-5 w-50 py-2 pb-5 bag">
-      Kurslar uchun texnalogiyalar
-    </h1>
-  <div class="container " >
-   
-    <div class="container  row mt-5 pt-5">
+  <h1 class="ml-5 mt-5 w-50 py-2 px-3 pb-5 bag">Technologies for programming</h1>
+  <div class="container">
+    <div class="container row mt-5 pt-5">
       <div class="col-12 mt-5 col-md-4">
         <div>
-          <input type="radio" id="one" value="One" v-model="picked" class="form-check-input fs-1" />
+          <input
+            type="radio"
+            id="one"
+            value="One"
+            v-model="picked"
+            class="form-check-input fs-1"
+          />
           <label for="one" class="form-check-label fs-5">Frontend dasturlash</label>
-
-          
         </div>
         <div>
-          <input type="radio" id="two" value="two" v-model="picked" class="form-check-input fs-1" />
+          <input
+            type="radio"
+            id="two"
+            value="two"
+            v-model="picked"
+            class="form-check-input fs-1"
+          />
           <label for="two" class="form-check-label fs-5">Backend dasturlash</label>
         </div>
         <div>
-          <input type="radio" id="four" value="four" v-model="picked" class="form-check-input fs-1" />
-          <label for="four" class="form-check-label fs-5">Mobile dasturlash (Flutter)</label>
+          <input
+            type="radio"
+            id="four"
+            value="four"
+            v-model="picked"
+            class="form-check-input fs-1"
+          />
+          <label for="four" class="form-check-label fs-5"
+            >Mobile dasturlash (Flutter)</label
+          >
         </div>
         <div>
-          <input type="radio" id="five" value="five" v-model="picked" class="form-check-input fs-1 radi" />
+          <input
+            type="radio"
+            id="five"
+            value="five"
+            v-model="picked"
+            class="form-check-input fs-1 radi"
+          />
           <label for="five" class="form-check-label fs-5">Grafik dizayn</label>
         </div>
         <div>
-          <input type="radio" id="sixe" value="sixe" v-model="picked" class="form-check-input fs-1 radi" />
+          <input
+            type="radio"
+            id="sixe"
+            value="sixe"
+            v-model="picked"
+            class="form-check-input fs-1 radi"
+          />
           <label for="sixe" class="form-check-label fs-5">3D max</label>
         </div>
       </div>
 
       <div class="box col-md-8 mt-5 col-12 pad">
-        <div class="mt-5 d-flex justify-content-around">
+        <div class="mt-5 d-flex justify-content-evenly">
           <div class="card1 card box1" :class="{ rang: picked == 'One' }">
             <img src="../assets/html.png" alt="" class="d-block m-auto" />
           </div>
@@ -46,7 +72,11 @@
             <img src="../assets/js.png" alt="" class="d-block m-auto" />
           </div>
           <div class="card1 card box1" :class="{ rang4: picked == 'One' }">
-            <img src="../assets/file_type_vue_icon_130078.png" alt="" class="d-block m-auto" />
+            <img
+              src="../assets/file_type_vue_icon_130078.png"
+              alt=""
+              class="d-block m-auto"
+            />
           </div>
           <div class="card1 card box1" :class="{ rang: picked == 'two' }">
             <img src="../assets/python.png" alt="" class="d-block m-auto" />
@@ -56,18 +86,21 @@
           </div>
         </div>
 
-        <div class="mt-5 d-flex justify-content-around ">
+        <div class="mt-5 d-flex justify-content-evenly flex-wrap">
           <div class="card1 card" :class="{ rang2: picked == 'two' }">
             <img src="../assets/c-.png" alt="" class="d-block m-auto" />
           </div>
           <div class="card1 card" :class="{ rang3: picked == 'two' }">
             <img src="../assets/c-sharp.png" alt="" class="d-block m-auto" />
           </div>
+          <!-- <div class="card1 card" :class="{ rang3: picked == 'two' }">
+            <img src="../assets/dotnet.png" alt="" class="d-block m-auto" />
+          </div> -->
           <div class="card1 card" :class="{ rang: picked == 'four' }">
             <img src="../assets/java.png" alt="" class="d-block m-auto" />
           </div>
           <div class="card1 card" :class="{ rang2: picked == 'four' }">
-            <img src="../assets/flutter.jpg" alt="" class="d-block m-auto" />
+            <img src="../assets/flutter.png" alt="" class="d-block m-auto" />
           </div>
           <div class="card1 card" :class="{ rang2: picked == 'five' }">
             <img src="../assets/photoshop.png" alt="" class="d-block m-auto" />
@@ -78,30 +111,25 @@
           <div class="card1 card" :class="{ rang2: picked == 'five' }">
             <img src="../assets/figma.png" alt="" class="d-block m-auto" />
           </div>
-
-         
         </div>
-        <div class=" d-flex justify-content-around mt-5">
-         <div class="card1 card" :class="{ rang2: picked == 'sixe' }">
-            <img src="../assets/3Dmax.jpeg" alt="" class="d-block m-auto" />
+        <div class="d-flex justify-content-evenly  mt-5">
+          <div class="card1 card" :class="{ rang2: picked == 'sixe' }">
+            <img src="../assets/3smax.png" alt="" class="d-block m-auto" />
           </div>
 
           <div class="card1 card" :class="{ rang2: picked == 'sixe' }">
             <img src="../assets/blender.jpg" alt="" class="d-block m-auto" />
-          </div></div>
-       
-       
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-
 export default {
   data() {
     return {
       picked: "One",
-   
     };
   },
 };
@@ -151,36 +179,36 @@ img {
 .rang {
   transition-delay: 0.1s;
   transform: scale(1.2);
-  background-color: #8bc5ec7b;
-  box-shadow: 4px 3px 15px #8bc5ec89;
+  background-color: #9fdbdd;
+  box-shadow: 4px 3px 5px #6c6c6c89;
 }
 
 .rang1 {
   transition-delay: 0.2s;
   transform: scale(1.2);
-  background-color: #8bc5ec7b;
-  box-shadow: 4px 3px 15px #8bc5ec89;
+  background-color: #9fdbdd;
+  box-shadow: 4px 3px 5px #6c6c6c89;
 }
 
 .rang2 {
   transition-delay: 0.3s;
   transform: scale(1.2);
-  background-color: #8bc5ec7b;
-  box-shadow: 4px 3px 15px #8bc5ec89;
+  background-color: #9fdbdd;
+  box-shadow: 4px 3px 5px #6c6c6c89;
 }
 
 .rang3 {
   transition-delay: 0.5s;
   transform: scale(1.2);
-  background-color: #8bc5ec7b;
-  box-shadow: 4px 3px 15px #8bc5ec89;
+  background-color: #9fdbdd;
+  box-shadow: 4px 3px 5px #6c6c6c89;
 }
 
 .rang4 {
   transition-delay: 0.6s;
   transform: scale(1.2);
-  background-color: #8bc5ec7b;
-  box-shadow: 4px 3px 15px #8bc5ec89;
+  background-color: #9fdbdd;
+  box-shadow: 4px 3px 5px #6c6c6c89;
 }
 
 .box {
@@ -201,9 +229,7 @@ i {
 
 .bag {
   background: rgb(93, 191, 156);
-  background: linear-gradient(13deg,
-      rgba(93, 191, 156, 1) 0%,
-      rgba(53, 73, 94, 1) 56%);
+  background: linear-gradient(13deg, rgba(93, 191, 156, 1) 0%, rgba(53, 73, 94, 1) 56%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 3px double rgb(93, 191, 156);
