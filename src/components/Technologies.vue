@@ -11,7 +11,7 @@
             v-model="picked"
             class="form-check-input fs-1"
           />
-          <label for="one" class="form-check-label fs-5">Frontend dasturlash</label>
+          <label for="one" class="form-check-label fs-5">Frontend </label>
         </div>
         <div>
           <input
@@ -21,7 +21,7 @@
             v-model="picked"
             class="form-check-input fs-1"
           />
-          <label for="two" class="form-check-label fs-5">Backend dasturlash</label>
+          <label for="two" class="form-check-label fs-5">Backend </label>
         </div>
         <div>
           <input
@@ -32,7 +32,7 @@
             class="form-check-input fs-1"
           />
           <label for="four" class="form-check-label fs-5"
-            >Mobile dasturlash (Flutter)</label
+            >Mobile dasturlash (Dart,Java)</label
           >
         </div>
         <div>
