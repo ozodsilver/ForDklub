@@ -11,6 +11,7 @@
   "dependencies": {
     "@vueuse/components": "^9.10.0",
     "@vueuse/core": "^9.10.0",
+    "atropos": "^1.0.2",
     "axios": "^1.2.1",
     "mdb-vue-ui-kit": "^3.2.0",
     "pinia": "^2.0.28",
