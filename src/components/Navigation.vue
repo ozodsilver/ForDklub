@@ -37,11 +37,6 @@
         </ul>
         <!-- Left links -->
       </div>
-      <!-- Collapsible wrapper -->
-
-      <!-- Right elements -->
-    
-      <!-- Right elements -->
     </div>
     <!-- Container wrapper -->
   </nav>
@@ -65,7 +60,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5 col-12 position-relative" style="margin-top: -25%">
-        <div class="play-btn-box" v-if="show" @click="show = !show" style="cursor:pointer">
+        <div
+          class="play-btn-box"
+          v-if="show"
+          @click="show = !show"
+          style="cursor: pointer"
+          ref = 'd333'
+        >
           <div class="play-button"><i class="fas fa-play text-light" id="play2"></i></div>
           <div class="play-btn-line1" id="line1">
             <div class="play-btn-line2" id="line2"></div>
@@ -74,7 +75,11 @@
 
         <div class="h-100">
           <Transition name="bounce">
-          <i class="fas fa-window-close float-right fa-2x" v-show="!show"  @click="show = !show"></i>
+            <i
+              class="fas fa-window-close float-right fa-2x"
+              v-show="!show"
+              @click="show = !show"
+            ></i>
           </Transition>
           <Transition name="bounce">
             <iframe
@@ -91,26 +96,37 @@
           </Transition>
         </div>
       </div>
-      <div class="col-12 col-md-7  d-md-block" style="margin-top: -30%;">
-        <img src="../assets/SVGdk.png" alt="" class=" d-block m-auto w-100 img-fluid " />
+      <div class="col-12 col-md-7 d-md-block" style="margin-top: -30%">
+        <img src="../assets/SVGdk.png" alt="" class="d-block m-auto w-100 img-fluid" ref = 'd33' />
       </div>
     </div>
+
+    <img src="../assets/dk3d.png" alt="" class="w-25  position-absolute" style="top:35%; left:0%; z-index:-33" ref = 'd3'>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      show: true,
-    };
-  },
-};
+<script setup>
+import {ref, onMounted} from 'vue';
+let d3 = ref('')
+let d33 = ref('')
+let d333 = ref('')
+let show = ref(true)
+
+
+
+
+onMounted(()=>{
+  document.addEventListener('mousemove', ()=>{
+d3.value.style.cssText =  `transform:translate(${-event.screenX/4}px, ${-event.screenY/16}px)`
+d33.value.style.cssText =  `transform:translate(${event.screenX/19}px, ${event.screenY/15}px)`
+d333.value.style.cssText =  `transform:translate(${-event.screenX/45}px, ${event.screenY/25}px)`
+  })
+})
+
 </script>
 
 <style scoped>
 nav {
-  background: transparent !important;
   border: none solid !important ;
   position: absolute;
   top: 0;
@@ -226,50 +242,46 @@ a:hover {
 }
 
 #line1 {
- animation: rotation 4s infinite linear;
+  animation: rotation 4s infinite linear;
 }
 
 @keyframes rotation {
   from {
-   transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-   transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
 #line2 {
- animation: rotation1 3s infinite linear;
+  animation: rotation1 3s infinite linear;
 }
 
 @keyframes rotation1 {
   from {
-   transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-   transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
 .bounce-enter-active {
   animation: bounce-in 2s;
- 
 }
 .bounce-leave-active {
- display: none;
-
+  display: none;
 }
 @keyframes bounce-in {
   0% {
     transform: scale(0);
-    
   }
   50% {
     transform: translateX(-900px) scale(1.5) rotate(-45deg);
   }
   100% {
     transform: scale(1);
-   
   }
 }
 </style>

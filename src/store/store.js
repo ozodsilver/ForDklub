@@ -36,8 +36,8 @@ export const useStore = defineStore('global', {
            id: 4,
            name: "nimdafdsa",
            title: "fdsfdsfsdfdsfdsaaa",
-           image: new URL("../assets/xodim/shakhzod.jpg", import.meta.url),
-           icon: new URL("../assets/backgroundForCourser/android.png", import.meta.url),
+           image: new URL("../assets/xodim/abdulaziz.png", import.meta.url),
+           icon: new URL("../assets/dotnet.png", import.meta.url),
            tel: "+998 99 670 03 25",
          },
          {
@@ -52,8 +52,8 @@ export const useStore = defineStore('global', {
            id: 6,
            name: "nimdafdsa",
            title: "fdsfdsfsdfdsfdswwwww",
-           image: new URL("../assets/xodim/shakhzod.jpg", import.meta.url),
-           icon: new URL("../assets/backgroundForCourser/android.png", import.meta.url),
+           image: new URL("../assets/xodim/Sardor.png", import.meta.url),
+           icon: new URL("../assets/c-.png", import.meta.url),
            tel: "+998 99 670 03 25",
          },
        ]

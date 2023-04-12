@@ -90,7 +90,7 @@ onMounted(() => {
     speed: 400,
 
     reset: true,
-  });
+  });  
 
   //It also supports NodeList
   VanillaTilt.init(document.querySelectorAll(".parent"));
