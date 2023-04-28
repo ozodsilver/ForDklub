@@ -1,6 +1,7 @@
 <template>
   <h1 class="w-25 fw-light ms-5 py-3 mt-5 color">Kurs Mentorlari</h1>
   <div class="container">
+  
     <div class="row mt-5 gap-5 justify-content-evenly">
       <div
         class="col-3 col-md-4 col-lg-3 parent mt-5"
@@ -21,6 +22,7 @@
           <div class="topInfo flex-column p-3">
             <p>
               {{ info.name }}
+              
             </p>
 
             <button @click="openModal(info.id)" class="btn btn-success">
@@ -43,12 +45,12 @@
     </atropos>
     
       </div>
-      <h2 class="text-muted text-center mt-5">DK academy direktori</h2>
+      <h2 class="text-dark text-center mt-5">"DK Academy" direktori</h2>
   
     <div class="w-100 d-flex justify-content-start ">
       <atropos class="my-atropos"   :active-offset="40"
       :shadow = 'false' :stretchZ = '6'>
-    <img src="../assets/xodim/Direktor.jpg" alt="" class="border p-3  w-50 d-block m-auto rounded-7">
+    <img src="../assets/xodim/Direktor.jpg" alt="" class="border p-3  w-25 d-block m-auto rounded-7">
     <h2 class="text-center">Husniddin Uzoqov</h2>
   </atropos>
     </div>

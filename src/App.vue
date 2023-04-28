@@ -517,6 +517,8 @@
       </div>
     </div>
   </div>
+
+
   <router-view v-if="loader"></router-view>
 </template>
 

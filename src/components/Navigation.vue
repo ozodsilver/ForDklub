@@ -101,7 +101,7 @@
       </div>
     </div>
 
-    <img src="../assets/dk3d.png" alt="" class="w-25  position-absolute" style="top:35%; left:0%; z-index:-33" ref = 'd3'>
+ 
   </div>
 </template>
 
@@ -114,12 +114,11 @@ let show = ref(true)
 
 
 
-
 onMounted(()=>{
   document.addEventListener('mousemove', ()=>{
-d3.value.style.cssText =  `transform:translate(${-event.screenX/4}px, ${-event.screenY/16}px)`
-d33.value.style.cssText =  `transform:translate(${event.screenX/19}px, ${event.screenY/15}px)`
-d333.value.style.cssText =  `transform:translate(${-event.screenX/45}px, ${event.screenY/25}px)`
+// d3.value.style.cssText =  `transform:translate(${-event.screenX/150}px, ${-event.screenY/80}px)`
+d33.value.style.cssText =  `transform:translate(${event.screenX/190}px, ${event.screenY/105}px)`
+d333.value.style.cssText =  `transform:translate(${-event.screenX/90}px, ${event.screenY/25}px)`
   })
 })
 

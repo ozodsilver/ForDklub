@@ -12,13 +12,13 @@
             {{ info.courseName }}
           </div>
           <div class="card-body">
-           
-            <p class="card-text">
+           <img :src="info.imageUrl" alt="" class="img-fluid  position-absolute" style="top:20px; left:30px; z-index:-1; width:60px">
+            <p class="card-text mt-3">
               {{ info.about }}
             </p>
-            <router-link to="/regestration" class="btn btn-success opacity-80 rounded-pill d-block bg-gradient">Kurs haqida</router-link>
+            <router-link to="/regestration" :class = "{disabled:info.courseName == 'Backend' ? true: false}" class="btn btn-success opacity-80 rounded-pill d-block bg-gradient">Kurs haqida</router-link>
           </div>
-          <div class="card-footer text-muted">Mavjud guruhlar : {{ info.groups }}</div>
+          <div class="card-footer text-muted">Hozirda Mavjud guruhlar soni : {{ info.groups }}</div>
         </div>
       </div>
     </div>
@@ -32,41 +32,41 @@ let infos = reactive([
   {
     id: 1,
     courseName: "Mobile dasturlash",
-    imageUrl: new URL("../assets/java.png", import.meta.url),
-    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
-    groups: 4,
+    imageUrl: new URL("../assets/backgroundForCourser/android.png", import.meta.url),
+    about:"Mobile dasturlash Bilan ajoyib ilovalar dahosi bo'ling",
+    groups: 2,
   },
 
   {
     id: 2,
-    courseName: "Mobile dasturlash",
-    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
-    imageUrl: new URL("../assets/java.png", import.meta.url),
-    groups: 2,
+    courseName: "Backend",
+    about:"Backend web dasturchi bo'lib, Murakkab infrastructuralarni barpo  eting",
+    imageUrl: new URL("../assets/c-sharp.png", import.meta.url),
+    groups: 0,
   },
 
   {
     id: 3,
     courseName: "Frontend",
-    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
-    imageUrl: new URL("../assets/java.png", import.meta.url),
-    groups: 7,
+    about:"Frontend dasturlash Foydalanuvchilarni jalb etadigan interactive web saytlar dahosi bo'ling", 
+    imageUrl: new URL("../assets/file_type_vue_icon_130078.png", import.meta.url),
+    groups: 3,
   },
 
   {
     id: 4,
-    courseName: "Backend",
-    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
-    imageUrl: new URL("../assets/java.png", import.meta.url),
-    groups: 4,
+    courseName: "Grafik Design",
+    about:"Mukkammal design yarating va grafik design mutahassisi bo'ling",
+    imageUrl: new URL("../assets/illustrator.png", import.meta.url),
+    groups: 2,
   },
 
   {
     id: 5,
-    courseName: "Grafik Design",
-    about:'Mobile dasturlash Bilan ajoyib ilovalar dahosi b"ling',
-    imageUrl: new URL("../assets/java.png", import.meta.url),
-    groups: 1,
+    courseName: "3d Max",
+    about:'3d Moddellarni mohirlik bilan yarating, va 3d Mutahassisiga aylaning',
+    imageUrl: new URL("../assets/3smax.png", import.meta.url),
+    groups: 2,
   },
 ]);
 </script>
@@ -76,6 +76,13 @@ let infos = reactive([
 .card{
   background: rgb(248, 240, 240) !important ;
 background: linear-gradient(90deg, rgba(254, 254, 254, 0.869) 10%, rgba(217, 249, 240, 0.686) 100%) !important;
+}
+
+.disabled{
+  background-color: rgb(163, 167, 171) !important;
+  opacity: 0.4;
+  box-shadow: none !important;
+  color:rgb(230, 225, 225) !important;
 }
 
 </style>
