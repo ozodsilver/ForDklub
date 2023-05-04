@@ -1,7 +1,7 @@
 <template>
     <div>
 <div class="container mt-5">
-<button class="btn btn-success  bg-gradient " id="home">Home page</button>
+<button class="btn btn-success  bg-gradient " id="home" @click="router.go(-1)">Home page</button>
 <div class="row align-items-center">
 <h1 class="mt-3 mb-5 text-dark">Course:</h1>
 <div class="col-7">
@@ -41,7 +41,9 @@
 </template>
 
 <script setup>
+import {useRouter} from 'vue-router';
 
+const router = useRouter()
 </script>
 
 <style lang="scss" scoped>

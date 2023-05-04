@@ -18,7 +18,7 @@
       </button>
 
       <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse   p-4 position-relative rounded mob" style="z-index:909999999" id="navbarSupportedContent">
         <!-- Navbar brand -->
         <a class="navbar-brand mt-2 mt-lg-0" href="#">
           <img src="../assets/dk.png" height="40" alt="MDB Logo" loading="lazy" />
@@ -96,7 +96,7 @@
           </Transition>
         </div>
       </div>
-      <div class="col-12 col-md-7 d-md-block" style="margin-top: -30%">
+      <div class="col-12 col-md-7 d-md-block dk" style="margin-top: -30%">
         <img src="../assets/SVGdk.png" alt="" class="d-block m-auto w-100 img-fluid" ref = 'd33' />
       </div>
     </div>
@@ -171,6 +171,28 @@ a:hover {
 #play2:hover {
   transform: scale(1.3);
 }
+
+@media (min-width:300px) {
+  .dk{
+    margin-top: 40px !important;
+  }
+
+  .mob{
+    background-color: black !important;
+  }
+}
+
+@media (min-width:600px) {
+  .dk{
+    margin-top: -30% !important;
+   
+  }
+
+  .mob{
+    background-color: transparent !important;
+  }
+}
+
 
 @keyframes play {
   0% {

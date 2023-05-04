@@ -4,7 +4,7 @@
   
     <div class="row mt-5 gap-5 justify-content-evenly">
       <div
-        class="col-3 col-md-4 col-lg-3 parent mt-5"
+        class="col-md-3 col-12 col-md-4 col-lg-3 parent mt-5"
         v-for="info of store.infos"
         :key="info.id"
       >
@@ -12,7 +12,7 @@
 
         <atropos class="my-atropos"   :active-offset="40"
       :shadow = 'false' :stretchZ = '6'>
-          <div class="box d-flex justify-content-center" style="height: 400px">
+          <div class="box d-flex justify-content-center" style="height: 500px">
           <img
             :src="info.icon"
             alt=""
@@ -50,7 +50,7 @@
     <div class="w-100 d-flex justify-content-start ">
       <atropos class="my-atropos"   :active-offset="40"
       :shadow = 'false' :stretchZ = '6'>
-    <img src="../assets/xodim/Direktor.jpg" alt="" class="border p-3  w-25 d-block m-auto rounded-7">
+    <img src="../assets/xodim/Direktor.jpg" alt="" class="border p-3  w-100 d-block m-auto rounded-7">
     <h2 class="text-center">Husniddin Uzoqov</h2>
   </atropos>
     </div>

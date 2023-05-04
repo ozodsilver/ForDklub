@@ -2,7 +2,7 @@
   <div class="container">
   <h1 class="my-5">Bizda Mavjud kurslar</h1>
     <div class="row">
-      <div class="col-4 mt-5" v-for="info in infos" :key="info.id">
+      <div class="col-12 col-md-4 mt-5" v-for="info in infos" :key="info.id">
         <div
           class="card mt-5 text-center shadow-lg ripple p-3  bg-gradient "
           data-mdb-ripple-color="info"
@@ -67,6 +67,14 @@ let infos = reactive([
     about:'3d Moddellarni mohirlik bilan yarating, va 3d Mutahassisiga aylaning',
     imageUrl: new URL("../assets/3smax.png", import.meta.url),
     groups: 2,
+  },
+
+  {
+    id: 6,
+    courseName: "Web design",
+    about:'Web sitelarning ajoyib mukammal  Designini yarating.',
+    imageUrl: new URL("../assets/figma.png", import.meta.url),
+    groups: 1,
   },
 ]);
 

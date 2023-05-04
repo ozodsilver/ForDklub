@@ -1,4 +1,7 @@
 <template>
+  <div class="container">
+
+  </div>
   <div style="margin-top: 100px">
     <Carousel
       :wrapAround="true"

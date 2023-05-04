@@ -22,6 +22,15 @@ const routes =  [
 let router = createRouter({
     routes,
     history: createWebHashHistory(),
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            if (savedPosition) {
+                return savedPosition
+              } else {
+                return { top: 100 }
+              }
+        }
+      }
 })
 
 
