@@ -9,16 +9,16 @@
           style="border-top-left-radius: 70px; border-bottom-right-radius: 70px;"
         >
           <div class="text-start fw-bold text-end">
-            {{ info.courseName }}
+          <span class="courseName">  {{ info.courseName }}</span>
           </div>
           <div class="card-body">
-           <img :src="info.imageUrl" alt="" class="img-fluid  position-absolute" style="top:20px; left:30px; z-index:-1; width:60px">
+           <img :src="info.imageUrl" alt="" class="img-fluid  position-absolute" style="top:20px; left:30px; z-index:23; width:60px">
             <p class="card-text mt-3">
               {{ info.about }}
             </p>
-            <router-link to="/regestration" :class = "{disabled:info.courseName == 'Backend' ? true: false}" class="btn btn-success opacity-80 rounded-pill d-block bg-gradient">Kurs haqida</router-link>
+            <router-link to="/regestration" :class = "{disabled:info.groups == 0 ? true: false}" class="btn btn-success opacity-80 rounded-pill d-block bg-gradient">Kurs haqida</router-link>
           </div>
-          <div class="card-footer text-muted">Hozirda Mavjud guruhlar soni : {{ info.groups }}</div>
+          <div class="card-footer text-muted">Hozirda Mavjud guruhlar soni :<span :class="{'bg-danger': info.groups == 0 ? true : false}" class="badge bg-success text-white"> {{ info.groups }}</span></div>
         </div>
       </div>
     </div>
@@ -69,13 +69,44 @@ let infos = reactive([
     groups: 2,
   },
 ]);
+
+let color;
 </script>
 
 <style lang="scss" scoped>
 
+
+
 .card{
   background: rgb(248, 240, 240) !important ;
 background: linear-gradient(90deg, rgba(254, 254, 254, 0.869) 10%, rgba(217, 249, 240, 0.686) 100%) !important;
+
+.courseName{
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  &:after{
+    content: '';
+position:absolute;
+width:50%;
+height: 2px;
+
+top:0;
+left: 0;
+background-color: rgba(29, 238, 186, 0.839);
+  }
+
+  &:before{
+    content: '';
+position:absolute;
+width:50%;
+height: 2px;
+bottom:0;
+right: 0;
+background-color: rgb(8, 235, 159);
+  }
+}
+
 }
 
 .disabled{
