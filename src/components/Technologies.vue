@@ -58,7 +58,7 @@
       </div>
 
       <div class="box col-md-8 mt-5 col-12 pad">
-        <div class="mt-5 d-flex justify-content-evenly">
+        <div class="mt-5 d-flex  justify-content-evenly">
           <div class="card1 card box1" :class="{ rang: picked == 'One' }">
             <img src="../assets/html.png" alt="" class="d-block m-auto" />
           </div>
@@ -233,5 +233,23 @@ i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 3px double rgb(93, 191, 156);
+}
+
+@media (min-width: 268px) {
+  .card1 {
+  width: 10%;
+  height: 40px !important;
+  color: orange;
+}
+
+}
+
+@media (min-width: 768px) {
+  .card1 {
+  width: 10%;
+  height: 80px !important;
+  color: orange;
+}
+
 }
 </style>

@@ -14,11 +14,14 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted,ref } from "vue";
 let loader = ref(false);
-setTimeout(() => {
-  loader.value = true;
-}, 3500);
+
+onMounted(()=>{
+  window.addEventListener("load", () => {
+    loader.value = true
+  });
+})
 </script>
 
 <style>

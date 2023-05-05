@@ -50,7 +50,7 @@
     <div class="w-100 d-flex justify-content-start ">
       <atropos class="my-atropos"   :active-offset="40"
       :shadow = 'false' :stretchZ = '6'>
-    <img src="../assets/xodim/Direktor.jpg" alt="" class="border p-3  w-100 d-block m-auto rounded-7">
+    <img src="../assets/xodim/Direktor.jpg" alt="" class="border p-3  w-25 d-block m-auto rounded-7 dir">
     <h2 class="text-center">Husniddin Uzoqov</h2>
   </atropos>
     </div>
@@ -142,8 +142,23 @@ let openModal = (id, event) => {
   background-color: rgba(10, 10, 10, 0.4);
 }
 
-@media screen and (max-width: 800px) {
+
+
+
+@media  (min-width: 200px) {
+  .dir{
+    width:100% !important;
+  }
 }
+
+@media  (min-width: 800px) {
+  .dir{
+    width:25% !important;
+  }
+}
+
+
+
 
 .modal-content1 {
   border: 1px rgb(255, 255, 255, 0.18);
